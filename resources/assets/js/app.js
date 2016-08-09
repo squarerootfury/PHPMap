@@ -7,14 +7,20 @@
 
 require('./bootstrap');
 
+// Including other Libraries
+require('./extra/bootstrap_extra');
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the body of the page. From here, you may begin adding components to
  * the application, or feel free to tweak this setup for your needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('homemap', require('./components/HomeMap.vue'));
+Vue.component('users', require('./components/Users.vue'));
+Vue.component('singleuser', require('./components/SingleUser.vue'));
+Vue.component('myprofile', require('./components/MyProfile.vue'));
 
 var app = new Vue({
-    el: 'body'
+    el: '#app'
 });

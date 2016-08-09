@@ -4,15 +4,17 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
+use PHPMap\User;
+
 class UserProfileTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testExample()
+    use DatabaseMigrations;
+
+    public function test_user_has_profile()
     {
-        $this->assertTrue(true);
+        $user = factory(User::class)->create(['username' => 'johndoe']);
+
+        $this->visit('/users/'.$user->username)
+            ->see($user->username);
     }
 }

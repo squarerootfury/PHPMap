@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'PHPMap\Events\SomeEvent' => [
-            'PHPMap\Listeners\EventListener',
+        'PHPMap\Events\Users\NewFollower' => [
+            'PHPMap\Listeners\Users\NewFollowerListener',
         ],
     ];
 

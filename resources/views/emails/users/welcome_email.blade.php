@@ -1,0 +1,1 @@
+<h4>Welcome to PHPMap, {{ $user->username }}!</h4>

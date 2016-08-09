@@ -12,7 +12,8 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'My Application',
+    'name' => 'PHPMap',
+    'logo' => '',
 
     /*
     |--------------------------------------------------------------------------
@@ -164,17 +165,20 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
-         * Package Service Providers...
-         */
-
-        /*
          * Application Service Providers...
          */
         PHPMap\Providers\AppServiceProvider::class,
-        // PHPMap\Providers\BroadcastServiceProvider::class,
+        PHPMap\Providers\BroadcastServiceProvider::class,
         PHPMap\Providers\AuthServiceProvider::class,
         PHPMap\Providers\EventServiceProvider::class,
         PHPMap\Providers\RouteServiceProvider::class,
+
+        /*
+         * Third Party Service Providers...
+         */
+        AlgoliaSearch\Laravel\AlgoliaServiceProvider::class,
+//        Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
 
     ],
 
@@ -221,6 +225,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /*
+         * Third Party Aliases
+         */
 
     ],
 

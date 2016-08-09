@@ -4,15 +4,18 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
+use PHPMap\User;
+
 class UserFollowTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testExample()
+    use DatabaseMigrations;
+
+    public function test_user_can_follow_another_user()
     {
-        $this->assertTrue(true);
+        $follower = factory(User::class)->create(['username' => 'johndoe']);
+
+        $followed = factory(User::class)->create(['username' => 'janedoe']);
+
+        $follower->follow_user($followed);
     }
 }

@@ -14,8 +14,22 @@
 $factory->define(PHPMap\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
+        'username' => $faker->username,
         'email' => $faker->safeEmail,
+        'lat' => $faker->latitude,
+        'lng' => $faker->longitude,
+        'address' => $faker->streetAddress,
+        'city' => $faker->city,
+        'country' => $faker->country,
+        'avatar' => 'https://www.gravatar.com/avatar/04d24379cd970b7670ee66fa203d646f?s=80&r=any&default=identicon&forcedefault=1',
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(PHPMap\Models\BlogEntry::class, function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->sentence(6, true),
+        'body' => $faker->paragraph,
     ];
 });
