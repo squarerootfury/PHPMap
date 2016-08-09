@@ -36,7 +36,7 @@
             cluster: '{{ config('broadcasting.connections.pusher.options.cluster') }}'
         };
     </script>
-    
+
     @yield('footer_scripts')
     <script src="{{ elixir('js/app.js') }}"></script>
     @yield('scripts')
