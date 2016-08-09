@@ -14,14 +14,14 @@
                         <p class="alu">{{ singleuser.intro }}</p>
                         <ul class="aoi">
                             <li class="aoj">
-                                <a href="#userModal" class="aku" data-toggle="modal">
+                                <a href="#" class="aku" data-toggle="modal">
                                     Followers
                                     <h5 class="ali">12M</h5>
                                 </a>
                             </li>
 
                             <li class="aoj">
-                                <a href="#userModal" class="aku" data-toggle="modal">
+                                <a href="#" class="aku" data-toggle="modal">
                                     Enemies
                                     <h5 class="ali">1</h5>
                                 </a>
@@ -82,7 +82,7 @@
                     </li>
 
                     <li class="qf b aml" v-for="post in userposts">
-                        <a class="qj" href="#">
+                        <a class="qj" href="/@{{ singleuser.username }}">
                             <img class="qh cu" v-bind:src="singleuser.avatar" alt="{{ singleuser.username }}">
                         </a>
                         <div class="qg">
