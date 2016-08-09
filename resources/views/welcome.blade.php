@@ -9,7 +9,7 @@
 @stop
 
 @section('footer_scripts')
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlDS7KYdMMQd_CynknFWTxhZwUwMhnZAg"></script>
+
 @stop
 
 @section('content')

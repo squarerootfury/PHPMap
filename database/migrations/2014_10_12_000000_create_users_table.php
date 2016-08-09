@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('slack_webhook_url')->nullable();
             $table->string('password');
+            $table->string('api_token')->unique();
 
             $table->string('lat')->nullable();
             $table->string('lng')->nullable();

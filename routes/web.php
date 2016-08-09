@@ -16,10 +16,15 @@ Route::resource('blogs.articles', 'Blog\ArticleController');
 
 Route::group(['prefix' => 'intern'], function () {
     Route::resource('usr', 'Intern\Users\UserController');
+    Route::resource('profile/posts', 'Intern\Profile\PostController');
+
+    Route::get('users/getPosts/{id}', 'Intern\Users\PostController@get');
 });
 
 Route::get('/test', function () {
     $users = factory(\PHPMap\User::class, 100)->create();
+
+//    return str_random(20).'.'.str_random(5).'_'.str_random(15);
 
 //    $user = \PHPMap\User::findByUsername('fwartner');
 //
@@ -29,3 +34,5 @@ Route::get('/test', function () {
 //
 //    $user->reindex();
 });
+
+Route::get('/profile', 'Profile\ProfileController@index');

@@ -20,6 +20,7 @@ Vue.component('homemap', require('./components/HomeMap.vue'));
 Vue.component('users', require('./components/Users.vue'));
 Vue.component('singleuser', require('./components/SingleUser.vue'));
 Vue.component('myprofile', require('./components/MyProfile.vue'));
+Vue.component('createarticle', require('./components/CreateArticle.vue'));
 
 var app = new Vue({
     el: '#app'

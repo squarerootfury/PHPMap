@@ -20,7 +20,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'username', 'avatar', 'email', 'slack_webhook_url', 'password', 'lat', 'lng', 'address', 'city', 'county', 'company', 'website', 'github_url', 'twitter_url', 'facebook_url', 'linkedin_url'
+        'name', 'username', 'avatar', 'email', 'slack_webhook_url', 'password', 'api_token', 'lat', 'lng', 'address', 'city', 'county', 'company', 'website', 'github_url', 'twitter_url', 'facebook_url', 'linkedin_url'
     ];
 
     /**
@@ -29,12 +29,38 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token', 'slack_webhook_url'
+        'password', 'remember_token', 'slack_webhook_url', 'api_token'
     ];
 
     public static $autoIndex = true;
     public static $autoDelete = true;
     public $indices = ['users'];
+
+    public $algoliaSettings = [
+        'attributesToIndex' => [
+            'name', 'username', 'avatar', 'email', 'lat', 'lng', 'address', 'city', 'country', 'company', 'website', 'created_at'
+        ],
+        'customRanking' => [
+            'asc(created_at)',
+        ],
+        'attributesForFaceting' => [
+            'city', 'country'
+        ],
+        'attributesToRetrieve' => [
+            'name', 'username', 'avatar', 'email', 'lat', 'lng', 'address', 'city', 'county', 'company', 'website'
+        ],
+        'attributesToHighlight' => [
+            'name', 'username', 'city', 'county', 'company'
+        ]
+    ];
+
+    public function getAlgoliaRecord()
+    {
+        $this->blog_entries();
+        $this->posts();
+
+        return $this->toArray();
+    }
 
     /**
      * Route notifications for the mail channel.
@@ -84,5 +110,10 @@ class User extends Authenticatable
     public function posts()
     {
         return $this->hasMany(UserPost::class);
+    }
+
+    public function favorite_articles()
+    {
+        
     }
 }

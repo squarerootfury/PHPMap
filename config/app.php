@@ -179,6 +179,7 @@ return [
         AlgoliaSearch\Laravel\AlgoliaServiceProvider::class,
 //        Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
+        Conner\Tagging\Providers\TaggingServiceProvider::class,
 
     ],
 

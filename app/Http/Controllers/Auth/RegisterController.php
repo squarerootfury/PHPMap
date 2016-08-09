@@ -74,6 +74,7 @@ class RegisterController extends Controller
             'lat' => $data['lat'],
             'lng' => $data['lng'],
             'city' => $data['city'],
+            'api_token' => str_random(20).'.'.str_random(5).'_'.str_random(15)
         ]);
     }
 }

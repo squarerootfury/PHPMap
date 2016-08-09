@@ -79,9 +79,7 @@
                                 <h5>{{ singleuser.username }}</h5>
                             </div>
 
-                            <p>
-                                {{ post.body }}
-                            </p>
+                            <p v-html="post.body | marked"></p>
                         </div>
                     </li>
 
@@ -136,7 +134,7 @@
 <script>
     export default {
         props: [
-            'user', 'posts', 'users'
+            'user', 'users'
         ],
 
         data() {
@@ -145,6 +143,10 @@
                 userposts: [],
                 relatedusers: []
             }
+        },
+
+        filters: {
+            marked: marked
         },
 
         ready() {
@@ -159,12 +161,22 @@
             },
 
             getPosts() {
-                this.userposts = this.posts;
+                this.$http.get('/intern/users/getPosts/'+ this.singleuser.id).then((response) => {
+                    this.userposts = response.json();
+                });
             },
 
             getUsers() {
                 this.relatedusers = this.users;
-            }
+            },
+
+            followUser() {
+                this.$http.post('/intern/users/followers', this.post).then((response) => {
+
+                    }, (response) => {
+                    swal("Ooops!", "Something went wrong", "error");
+                });
+            },
         }
     }
 </script>

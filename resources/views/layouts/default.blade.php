@@ -13,12 +13,21 @@
 
     @yield('styles')
 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlDS7KYdMMQd_CynknFWTxhZwUwMhnZAg"></script>
+
 </head>
 <body id="app">
 
     @include('_includes.navigation')
 
     @yield('content')
+
+    <footer id="footer">
+        <div class="container">
+            <p>Copyright &copy; - Made with <span class="red">❤︎</span> by <a href="https://twitter.com/fwartner">Florian</a>.
+                Find this on <a href="https://github.com/PHPMap/PHPMap">GitHub</a></p>
+        </div>
+    </footer>
 
     <script>
         window.USER = {!! Auth::check() ? Auth::user() : 'null' !!};

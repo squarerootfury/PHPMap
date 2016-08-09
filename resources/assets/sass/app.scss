@@ -4,8 +4,12 @@
 // Variables
 @import "variables";
 
-@import "toolkit";
-@import "social";
-
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Extra
+@import "node_modules/selectize/dist/css/selectize.bootstrap3";
+@import "node_modules/sweetalert/dev/sweetalert";
+@import "toolkit";
+@import "social";
+@import "extra";

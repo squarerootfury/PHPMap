@@ -9,7 +9,7 @@
 @stop
 
 @section('footer_scripts')
-    <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+
 @stop
 
 @section('content')
