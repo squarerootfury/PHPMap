@@ -17,7 +17,8 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('username')->unique();;
-            $table->string('avatar')->nullable();
+            $table->string('avatar')->default('/images/profile_image.png');
+            $table->string('profile_cover')->default('/images/profile_cover.jpg');
             $table->string('email')->unique();
             $table->string('slack_webhook_url')->nullable();
             $table->string('password');

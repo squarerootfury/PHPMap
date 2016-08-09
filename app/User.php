@@ -20,7 +20,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'username', 'avatar', 'email', 'slack_webhook_url', 'password', 'api_token', 'lat', 'lng', 'address', 'city', 'county', 'company', 'website', 'github_url', 'twitter_url', 'facebook_url', 'linkedin_url'
+        'name', 'username', 'avatar', 'profile_cover', 'email', 'slack_webhook_url', 'password', 'api_token', 'lat', 'lng', 'address', 'city', 'county', 'company', 'website', 'github_url', 'twitter_url', 'facebook_url', 'linkedin_url'
     ];
 
     /**

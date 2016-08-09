@@ -3,7 +3,7 @@
         <div class="gc">
             <div class="gn">
                 <div class="qv rc aog alu">
-                    <div class="qx" style="background-image: url({{ singleuser.avatar }})"></div>
+                    <div class="qx" style="background-image: url({{ singleuser.profile_cover }})"></div>
                     <div class="qw dj">
                         <img class="aoh" v-bind:src="singleuser.avatar">
 
@@ -93,15 +93,6 @@
             </div>
 
             <div class="gn">
-                <!--<div class="qv rc alu ss">-->
-                    <!--<div class="qw">-->
-                        <!--<h5 class="ald">Sponsored</h5>-->
-                        <!--<div data-grid="images" data-target-height="150"><img class="qh" data-width="640" data-height="640" data-action="zoom" src="https://bootstrap-themes.github.io/application/assets/img/instagram_2.jpg" style="width: 245px; height: 230px; margin-bottom: 10px; margin-right: 0px; display: inline-block; vertical-align: bottom;"></div>-->
-                        <!--<p><strong>It might be time to visit Iceland.</strong> Iceland is so chill, and everything looks cool here. Also, we heard the people are pretty nice. What are you waiting for?</p>-->
-                        <!--<button class="cg ts fx">Buy a ticket</button>-->
-                    <!--</div>-->
-                <!--</div>-->
-
                 <div class="qv rc alu ss">
                     <div class="qw">
                         <h5 class="ald">Other Users <small>· <a href="/users">View All</a></small></h5>

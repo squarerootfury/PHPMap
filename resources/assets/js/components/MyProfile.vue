@@ -3,7 +3,7 @@
         <div class="gc">
             <div class="gn">
                 <div class="qv rc aog alu">
-                    <div class="qx" style="background-image: url({{ singleuser.avatar }})"></div>
+                    <div class="qx" style="background-image: url({{ singleuser.profile_cover }})"></div>
                     <div class="qw dj">
                         <img class="aoh" v-bind:src="singleuser.avatar">
 
@@ -72,7 +72,7 @@
 
                     <li class="qf b aml">
                         <div class="input-group">
-                            <textarea type="text" class="form-control" placeholder="What´s on your mind..?" v-model="post.body"></textarea>
+                            <input type="text" class="form-control" placeholder="What´s on your mind..?" v-model="post.body">
                             <div class="fj">
                                 <button type="button" class="cg fm" @click.prevent="createPost">
                                     Publish
