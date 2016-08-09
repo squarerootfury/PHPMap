@@ -13,7 +13,7 @@
 
     @yield('styles')
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlDS7KYdMMQd_CynknFWTxhZwUwMhnZAg"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_KEY') }}"></script>
 
 </head>
 <body id="app">
