@@ -1,7 +1,5 @@
 <template>
-    <div class="container-fluid">
-        <div id="map"></div>
-    </div>
+    <div id="map"></div>
 </template>
 
 <script>
