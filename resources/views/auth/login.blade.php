@@ -15,9 +15,36 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Login</div>
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body">
+                        <h5>What is PHPMap?</h5>
+                        <p>PHPMap is an interactive map of php-developers worldwide.</p>
+
+                        <h5>Features</h5>
+                        <ul>
+                            <li>Meet other php-developers around you</li>
+                            <li>Organize meetups & usergroups in your area</li>
+                            <li>Work on projects together</li>
+                            <li>Find awesome projects</li>
+                            <li>Have a look, who´s next to you</li>
+                            <li>More will follow..</li>
+                        </ul>
+
+                        <h5>Can i contribute?</h5>
+                        <p>Yes. The source of PHPMap is licensed under the MIT-License available on <a href="https://github.com/PHPMap/PHPMap">GitHub</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Login</h3>
+                    </div>
                     <div class="panel-body">
                         <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                             {{ csrf_field() }}

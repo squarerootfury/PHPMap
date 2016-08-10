@@ -168,7 +168,7 @@ return [
          * Application Service Providers...
          */
         PHPMap\Providers\AppServiceProvider::class,
-        PHPMap\Providers\BroadcastServiceProvider::class,
+        // PHPMap\Providers\BroadcastServiceProvider::class,
         PHPMap\Providers\AuthServiceProvider::class,
         PHPMap\Providers\EventServiceProvider::class,
         PHPMap\Providers\RouteServiceProvider::class,
@@ -180,6 +180,7 @@ return [
 //        Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Conner\Tagging\Providers\TaggingServiceProvider::class,
+        Spatie\Backup\BackupServiceProvider::class,
 
     ],
 

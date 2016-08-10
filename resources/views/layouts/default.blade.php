@@ -24,7 +24,7 @@
 
     <footer id="footer">
         <div class="container">
-            <p>Copyright &copy; - Made with <span class="red">❤︎</span> by <a href="https://twitter.com/fwartner">Florian</a>.
+            <p>Copyright &copy; {{ date('Y') }} - Made with <span class="red">❤︎</span> by <a href="https://twitter.com/fwartner">Florian</a>.
                 Find this on <a href="https://github.com/PHPMap/PHPMap">GitHub</a></p>
         </div>
     </footer>

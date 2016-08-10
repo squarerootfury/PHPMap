@@ -67,11 +67,15 @@
 </script>
 
 <style>
+    body {
+
+    }
+
     #map {
         width: 100%;
         height: 600px;
-        position: absolute;
+        position: relative;
         left:0;
-        top:48px;
+        top:0px;
     }
 </style>

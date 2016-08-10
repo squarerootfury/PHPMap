@@ -18,4 +18,8 @@
 
 @section('content')
     <homemap></homemap>
+
+    <div class="container">
+        <h1>Test und so</h1>
+    </div>
 @stop
