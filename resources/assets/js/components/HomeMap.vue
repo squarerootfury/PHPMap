@@ -75,7 +75,7 @@
         width: 100%;
         height: 600px;
         position: relative;
-        left:0;
-        top:0px;
+        left: 0;
+        top: -22px;
     }
 </style>

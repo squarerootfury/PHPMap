@@ -63,13 +63,13 @@
                         <p>PHPMap is an interactive map of php-developers worldwide.</p>
 
                         <h5>Features</h5>
-                        <ul>
-                            <li>Meet other php-developers around you</li>
-                            <li>Organize meetups & usergroups in your area</li>
-                            <li>Work on projects together</li>
-                            <li>Find awesome projects</li>
-                            <li>Have a look, who´s next to you</li>
-                            <li>More will follow..</li>
+                        <ul class="fa-ul">
+                            <li class=""><i class="fa fa-check green" aria-hidden="true"></i> Meet other php-developers around you</li>
+                            <li><i class="fa fa-check green" aria-hidden="true"></i> Organize meetups & usergroups in your area</li>
+                            <li><i class="fa fa-check green" aria-hidden="true"></i> Work on projects together</li>
+                            <li><i class="fa fa-check green" aria-hidden="true"></i> Find awesome projects</li>
+                            <li><i class="fa fa-check green" aria-hidden="true"></i> Have a look, who´s next to you</li>
+                            <li><i class="fa fa-check green" aria-hidden="true"></i> More will follow..</li>
                         </ul>
 
                         <h5>Can i contribute?</h5>
