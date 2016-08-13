@@ -1,11 +1,11 @@
 <?php
 
-namespace PHPMap\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\ServiceProvider;
-use PHPMap\Mail\Users\UserRegisteredMail;
-use PHPMap\User;
+use App\Mail\Users\UserRegisteredMail;
+use App\User;
 
 class AppServiceProvider extends ServiceProvider
 {

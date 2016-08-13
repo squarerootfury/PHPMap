@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a0e9945586a3a60ada0e5073349808d4",
-    "content-hash": "7c859f61ab5a623a35c4e266ac5b141c",
+    "hash": "f946878eaf3b504322fdabdf92e8684a",
+    "content-hash": "32eb48c2af0fa12a30f77fa7a76a1d0d",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -104,6 +104,56 @@
                 "search"
             ],
             "time": "2016-08-02 17:05:04"
+        },
+        {
+            "name": "berkayk/onesignal-laravel",
+            "version": "v0.9.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/berkayk/laravel-onesignal.git",
+                "reference": "07806bdea46f1d693aa2711cccdea3fa7580d29b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/berkayk/laravel-onesignal/zipball/07806bdea46f1d693aa2711cccdea3fa7580d29b",
+                "reference": "07806bdea46f1d693aa2711cccdea3fa7580d29b",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.2",
+                "illuminate/support": "4.*|5.*",
+                "php": ">=5.4.0",
+                "symfony/psr-http-message-bridge": "^0.2.0"
+            },
+            "require-dev": {
+                "vlucas/phpdotenv": "^2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Berkayk\\OneSignal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Berkay Kaya",
+                    "email": "berkayk@gmail.com",
+                    "homepage": "http://berkaykaya.com"
+                }
+            ],
+            "description": "OneSignal Push Wrapper Laravel",
+            "keywords": [
+                "WebPush",
+                "laravel",
+                "laravel 5",
+                "onesignal",
+                "push"
+            ],
+            "time": "2016-06-01 10:12:21"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -490,6 +540,58 @@
             "time": "2016-06-24 23:00:38"
         },
         {
+            "name": "illuminate/notifications",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/notifications.git",
+                "reference": "78388126632f698bc839a7b34728c23d54703305"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/notifications/zipball/78388126632f698bc839a7b34728c23d54703305",
+                "reference": "78388126632f698bc839a7b34728c23d54703305",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/broadcasting": "5.3.*",
+                "illuminate/bus": "5.3.*",
+                "illuminate/contracts": "5.3.*",
+                "illuminate/support": "5.3.*",
+                "php": ">=5.6.4",
+                "ramsey/uuid": "~3.0"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "Required to use the Slack transport.",
+                "illuminate/database": "Required to use the database transport (5.3.*).",
+                "nexmo/client": "Required to use the Nexmo transport."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Notifications\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "The Illuminate Notifications package.",
+            "homepage": "https://laravel.com",
+            "time": "2016-08-10 21:35:54"
+        },
+        {
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
@@ -635,17 +737,73 @@
             "time": "2015-12-05 17:17:57"
         },
         {
+            "name": "laravel-notification-channels/onesignal",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-notification-channels/onesignal.git",
+                "reference": "1e29541fec4ec0202557311167fd4a71620ada81"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-notification-channels/onesignal/zipball/1e29541fec4ec0202557311167fd4a71620ada81",
+                "reference": "1e29541fec4ec0202557311167fd4a71620ada81",
+                "shasum": ""
+            },
+            "require": {
+                "berkayk/onesignal-laravel": "^0.9.3",
+                "illuminate/events": "^5.3@dev",
+                "illuminate/notifications": "^5.3@dev",
+                "illuminate/support": "^5.3@dev",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NotificationChannels\\OneSignal\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mohamed Said",
+                    "email": "theMohamedSaid@gmail.com",
+                    "homepage": "https://themsaid.com"
+                },
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be"
+                },
+                {
+                    "name": "Marcel Pociot",
+                    "email": "hello@marcelpociot.com",
+                    "homepage": "http://marcelpociot.com"
+                }
+            ],
+            "description": "OneSignal Notifications driver",
+            "homepage": "https://github.com/laravel-notification-channels/onesignal",
+            "time": "2016-08-12 08:14:15"
+        },
+        {
             "name": "laravel/framework",
             "version": "5.3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "fb6914bfbb50cbe5c8b4ce43735a0d534730194a"
+                "reference": "8769e25b09e7c38c852a2764ba238f3cd9d9f5d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/fb6914bfbb50cbe5c8b4ce43735a0d534730194a",
-                "reference": "fb6914bfbb50cbe5c8b4ce43735a0d534730194a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/8769e25b09e7c38c852a2764ba238f3cd9d9f5d2",
+                "reference": "8769e25b09e7c38c852a2764ba238f3cd9d9f5d2",
                 "shasum": ""
             },
             "require": {
@@ -759,20 +917,20 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-08-09 21:40:57"
+            "time": "2016-08-11 21:06:15"
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.26",
+            "version": "1.0.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "fb3b30dca320b36931ea878fea17ebe136fba1b0"
+                "reference": "50e2045ed70a7e75a5e30bc3662904f3b67af8a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/fb3b30dca320b36931ea878fea17ebe136fba1b0",
-                "reference": "fb3b30dca320b36931ea878fea17ebe136fba1b0",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/50e2045ed70a7e75a5e30bc3662904f3b67af8a9",
+                "reference": "50e2045ed70a7e75a5e30bc3662904f3b67af8a9",
                 "shasum": ""
             },
             "require": {
@@ -842,7 +1000,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-08-03 09:49:11"
+            "time": "2016-08-10 08:55:11"
         },
         {
             "name": "monolog/monolog",
@@ -1445,61 +1603,6 @@
                 "uuid"
             ],
             "time": "2016-08-02 18:39:32"
-        },
-        {
-            "name": "rtconner/laravel-tagging",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rtconner/laravel-tagging.git",
-                "reference": "4c93b555dd3b3f804c779a30367040c224ca9ad4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rtconner/laravel-tagging/zipball/4c93b555dd3b3f804c779a30367040c224ca9ad4",
-                "reference": "4c93b555dd3b3f804c779a30367040c224ca9ad4",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/database": ">= 5.0",
-                "illuminate/support": ">= 5.0",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "orchestra/testbench": "~3.0",
-                "phpunit/phpunit": "~4.0",
-                "vlucas/phpdotenv": "~2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Conner\\Tagging\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Robert Conner",
-                    "email": "rtconner@smarter.bz"
-                }
-            ],
-            "description": "Use PHP traits to extend Laravel Eloquent Models to allow Tags. Models can be marked as Taggable.",
-            "homepage": "https://smartersoftware.net/packages/laravel-tagging-taggable",
-            "keywords": [
-                "Taggable",
-                "eloquent",
-                "laravel",
-                "laravel5",
-                "tag",
-                "tagged",
-                "tagging",
-                "tags"
-            ],
-            "time": "2016-04-07 05:36:25"
         },
         {
             "name": "spatie/db-dumper",
@@ -2296,6 +2399,60 @@
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
             "time": "2016-07-28 11:13:48"
+        },
+        {
+            "name": "symfony/psr-http-message-bridge",
+            "version": "v0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/psr-http-message-bridge.git",
+                "reference": "dc7e308e1dc2898a46776e2221a643cb08315453"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/dc7e308e1dc2898a46776e2221a643cb08315453",
+                "reference": "dc7e308e1dc2898a46776e2221a643cb08315453",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "psr/http-message": "~1.0",
+                "symfony/http-foundation": "~2.3|~3.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7|~3.0"
+            },
+            "suggest": {
+                "zendframework/zend-diactoros": "To use the Zend Diactoros factory"
+            },
+            "type": "symfony-bridge",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bridge\\PsrHttpMessage\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "PSR HTTP message bridge",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr-7"
+            ],
+            "time": "2015-05-29 17:57:12"
         },
         {
             "name": "symfony/routing",
@@ -4218,7 +4375,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "laravel-notification-channels/onesignal": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

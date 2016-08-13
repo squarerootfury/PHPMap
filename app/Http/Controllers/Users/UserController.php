@@ -1,13 +1,13 @@
 <?php
 
-namespace PHPMap\Http\Controllers\Users;
+namespace App\Http\Controllers\Users;
 
 use Illuminate\Http\Request;
 
-use PHPMap\Http\Requests;
-use PHPMap\Http\Controllers\Controller;
-use PHPMap\Models\UserPost;
-use PHPMap\User;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\Models\UserPost;
+use App\User;
 
 class UserController extends Controller
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace PHPMap\Http\Controllers\Blog;
+namespace App\Http\Controllers\Blog;
 
 use Illuminate\Http\Request;
 
-use PHPMap\Http\Requests;
-use PHPMap\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
-use PHPMap\User;
+use App\User;
 
 class UserController extends Controller
 {

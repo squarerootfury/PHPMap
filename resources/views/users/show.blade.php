@@ -13,7 +13,5 @@
 @stop
 
 @section('content')
-    <div class="container">
-        <singleuser :user="{{ $user }}" :posts="{{ $user->posts }}" :users="{{ $users }}"></singleuser>
-    </div>
+    <singleuser :user="{{ $user }}" :posts="{{ $user->posts }}" :users="{{ $users }}"></singleuser>
 @stop

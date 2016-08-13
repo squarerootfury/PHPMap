@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(PHPMap\User::class, function (Faker\Generator $faker) {
+$factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'username' => $faker->username,
@@ -28,7 +28,7 @@ $factory->define(PHPMap\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(PHPMap\Models\BlogEntry::class, function (Faker\Generator $faker) {
+$factory->define(App\Models\BlogEntry::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->sentence(6, true),
         'body' => $faker->paragraph,

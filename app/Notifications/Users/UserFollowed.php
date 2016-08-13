@@ -1,12 +1,12 @@
 <?php
 
-namespace PHPMap\Notifications\Users;
+namespace App\Notifications\Users;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
-use PHPMap\User;
+use App\User;
 
 class UserFollowed extends Notification implements ShouldQueue
 {

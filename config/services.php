@@ -34,4 +34,9 @@ return [
         'client_secret' => env('GITHUB_APP_SECRET'),
         'redirect' => env('GITHUB_APP_CALLBACK'),
     ],
+
+    'onesignal' => [
+        'app_id' => env('ONESIGNAL_APP_ID'),
+        'rest_api_key' => env('ONESIGNAL_REST_API_KEY')
+    ],
 ];

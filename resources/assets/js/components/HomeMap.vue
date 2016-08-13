@@ -67,10 +67,6 @@
 </script>
 
 <style>
-    body {
-
-    }
-
     #map {
         width: 100%;
         height: 600px;

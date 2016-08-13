@@ -12,11 +12,10 @@
     <script>
         var placesAutocomplete = places({
             container: document.querySelector('#address-input'),
-//            type: 'country'
+            type: 'city'
         });
 
         placesAutocomplete.on('change', e => this.updateLatLng(e));
-//        placesAutocomplete.on('change', e => console.log(e.suggestion));
         var updateLatLng = function(e) {
             $('<input>').attr({
                 type: 'hidden',
@@ -36,7 +35,7 @@
                 type: 'hidden',
                 id: 'city',
                 name: 'city',
-                value: e.suggestion['city']
+                value: e.suggestion['name']
             }).appendTo('form');
 
             $('<input>').attr({
@@ -53,7 +52,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Information</h3>
@@ -69,6 +68,7 @@
                             <li><i class="fa fa-check green" aria-hidden="true"></i> Work on projects together</li>
                             <li><i class="fa fa-check green" aria-hidden="true"></i> Find awesome projects</li>
                             <li><i class="fa fa-check green" aria-hidden="true"></i> Have a look, who´s next to you</li>
+                            <li><i class="fa fa-check green" aria-hidden="true"></i> Create own articles / tutorials and more</li>
                             <li><i class="fa fa-check green" aria-hidden="true"></i> More will follow..</li>
                         </ul>
 
@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Register</h3>

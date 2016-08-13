@@ -31,6 +31,7 @@
                             <li><i class="fa fa-check green" aria-hidden="true"></i> Work on projects together</li>
                             <li><i class="fa fa-check green" aria-hidden="true"></i> Find awesome projects</li>
                             <li><i class="fa fa-check green" aria-hidden="true"></i> Have a look, who´s next to you</li>
+                            <li><i class="fa fa-check green" aria-hidden="true"></i> Create own articles / tutorials and more</li>
                             <li><i class="fa fa-check green" aria-hidden="true"></i> More will follow..</li>
                         </ul>
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPMap\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'PHPMap\Events\Users\NewFollower' => [
-            'PHPMap\Listeners\Users\NewFollowerListener',
+        'App\Events\Users\NewFollower' => [
+            'App\Listeners\Users\NewFollowerListener',
         ],
     ];
 

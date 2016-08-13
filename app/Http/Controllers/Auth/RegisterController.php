@@ -1,10 +1,10 @@
 <?php
 
-namespace PHPMap\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use PHPMap\User;
+use App\User;
 use Validator;
-use PHPMap\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
@@ -54,6 +54,7 @@ class RegisterController extends Controller
             'password' => 'required|min:6|confirmed',
             'address' => 'required|max:255',
             'city' => 'required|max:255',
+            'country' => 'required|max:255',
         ]);
     }
 
@@ -74,6 +75,7 @@ class RegisterController extends Controller
             'lat' => $data['lat'],
             'lng' => $data['lng'],
             'city' => $data['city'],
+            'country' => $data['country'],
             'api_token' => str_random(20).'.'.str_random(5).'_'.str_random(15)
         ]);
     }

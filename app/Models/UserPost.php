@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPMap\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use PHPMap\User;
+use App\User;
 
 class UserPost extends Model
 {

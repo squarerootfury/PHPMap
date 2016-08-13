@@ -1,11 +1,11 @@
 <?php
 
-namespace PHPMap\Listeners\Users;
+namespace App\Listeners\Users;
 
-use PHPMap\Events\Users\NewFollower;
+use App\Events\Users\NewFollower;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use PHPMap\Notifications\Users\UserFollowed;
+use App\Notifications\Users\UserFollowed;
 
 class NewFollowerListener implements ShouldQueue
 {

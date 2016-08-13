@@ -1,9 +1,9 @@
 <?php
 
-namespace PHPMap\Console\Commands\Search;
+namespace App\Console\Commands\Search;
 
 use Illuminate\Console\Command;
-use PHPMap\User;
+use App\User;
 
 class ReindexCommand extends Command
 {

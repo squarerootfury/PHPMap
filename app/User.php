@@ -1,13 +1,13 @@
 <?php
 
-namespace PHPMap;
+namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use AlgoliaSearch\Laravel\AlgoliaEloquentTrait;
 
-use PHPMap\Models\BlogEntry;
-use PHPMap\Models\UserPost;
+use App\Models\BlogEntry;
+use App\Models\UserPost;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
@@ -20,7 +20,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'username', 'avatar', 'profile_cover', 'email', 'slack_webhook_url', 'password', 'api_token', 'lat', 'lng', 'address', 'city', 'county', 'company', 'website', 'github_url', 'twitter_url', 'facebook_url', 'linkedin_url'
+        'name', 'username', 'avatar', 'profile_cover', 'email', 'slack_webhook_url', 'password', 'api_token', 'lat', 'lng', 'address', 'city', 'country', 'company', 'intro', 'website', 'github_url', 'twitter_url', 'facebook_url', 'linkedin_url'
     ];
 
     /**
@@ -47,7 +47,7 @@ class User extends Authenticatable
             'city', 'country'
         ],
         'attributesToRetrieve' => [
-            'name', 'username', 'avatar', 'email', 'lat', 'lng', 'address', 'city', 'county', 'company', 'website'
+            'name', 'username', 'avatar', 'email', 'lat', 'lng', 'address', 'city', 'country', 'company', 'website'
         ],
         'attributesToHighlight' => [
             'name', 'username', 'city', 'county', 'company'
@@ -97,11 +97,6 @@ class User extends Authenticatable
         return self::where('city', $city)->get();
     }
 
-    public static function follow_user($user)
-    {
-        return false;
-    }
-
     public function blog_entries()
     {
         return $this->hasMany(BlogEntry::class);
@@ -115,5 +110,19 @@ class User extends Authenticatable
     public function favorite_articles()
     {
         
+    }
+
+    function followers()
+    {
+        return $this->belongsToMany(User::class, 'followers', 'user_id', 'follower_id');
+    }
+
+    function followtoggle(User $user) {
+        $this->followers()->toggle($user->id);
+    }
+
+    public function routeNotificationForOneSignal()
+    {
+        return 'ONE_SIGNAL_PLAYER_ID';
     }
 }

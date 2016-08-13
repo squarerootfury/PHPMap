@@ -16,6 +16,6 @@ class UserFollowTest extends TestCase
 
         $followed = factory(User::class)->create(['username' => 'janedoe']);
 
-        $follower->follow_user($followed);
+        $follower->followtoggle($followed);
     }
 }

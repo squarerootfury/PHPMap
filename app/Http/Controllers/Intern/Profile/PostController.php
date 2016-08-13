@@ -1,12 +1,12 @@
 <?php
 
-namespace PHPMap\Http\Controllers\Intern\Profile;
+namespace App\Http\Controllers\Intern\Profile;
 
 use Illuminate\Http\Request;
 
-use PHPMap\Http\Requests;
-use PHPMap\Http\Controllers\Controller;
-use PHPMap\Models\UserPost;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\Models\UserPost;
 
 class PostController extends Controller
 {

@@ -1,104 +1,122 @@
 <template>
     <div class="container">
-        <div class="by amt">
-            <div class="gc">
-                <div class="gn">
-                    <div class="qv rc aog alu">
-                        <div class="qx" style="background-image: url({{ singleuser.profile_cover }})"></div>
-                        <div class="qw dj">
-                            <img class="aoh" v-bind:src="singleuser.avatar">
+        <div class="row">
+            <div class="col-md-3">
 
-                            <h5 class="qy">
-                                <p class="aku">{{ singleuser.name }} <br> <small>@{{ singleuser.username }}</small></p>
-                            </h5>
+                <div class="panel panel-default">
+                    <div class="card hovercard">
+                        <div class="cardheader" style="
+                    background: url(https://maps.googleapis.com/maps/api/staticmap?maptype=roadmap&center={{ singleuser.lat }},{{ singleuser.lng }}&zoom=16&size=640x400&key=AIzaSyDlDS7KYdMMQd_CynknFWTxhZwUwMhnZAg);
+                    background-size: cover;
+                    ; height: 135px;">
 
-                            <p class="alu">{{ singleuser.intro }}</p>
-                            <ul class="aoi">
-                                <li class="aoj">
-                                    <a href="#" class="aku" data-toggle="modal">
-                                        Followers
-                                        <h5 class="ali">12M</h5>
-                                    </a>
-                                </li>
-
-                                <li class="aoj">
-                                    <a href="#" class="aku" data-toggle="modal">
-                                        Enemies
-                                        <h5 class="ali">1</h5>
-                                    </a>
-                                </li>
-                            </ul>
+                        </div>
+                        <div class="avatar">
+                            <img alt="" v-bind:src="singleuser.avatar" alt="{{ singleuser.username }}">
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                <p>{{ singleuser.name }}</p>
+                            </div>
+                            <div class="desc">@{{ singleuser.username }}</div>
+                            <div class="desc"></div>
+                            <div class="desc"></div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="qv rc sm sp">
-                        <div class="qw">
-                            <h5 class="ald">About</h5>
-                            <ul class="eb tb">
-                                <li v-if="singleuser.company">
-                                    <i class="fa fa-briefcase" aria-hidden="true"></i> &nbsp; {{ singleuser.company }}
-                                </li>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <ul class="fa-ul">
+                            <li v-if="singleuser.company">
+                                <i class="fa fa-briefcase" aria-hidden="true"></i> &nbsp; {{ singleuser.company }}
+                            </li>
 
-                                <li v-if="singleuser.city">
-                                    <i class="fa fa-home" aria-hidden="true"></i> &nbsp; <span v-if="singleuser.city">{{ singleuser.city }}</span><span v-if="singleuser.country">, {{ singleuser.country }}</span>
-                                </li>
+                            <li v-if="singleuser.city">
+                                <i class="fa fa-home" aria-hidden="true"></i> &nbsp; {{ singleuser.address }}
+                            </li>
 
-                                <li v-if="singleuser.website">
-                                    <i class="fa fa-link" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.website }}">Website</a>
-                                </li>
+                            <li v-if="singleuser.website">
+                                <i class="fa fa-link" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.website }}">Website</a>
+                            </li>
 
-                                <li v-if="singleuser.github_url">
-                                    <i class="fa fa-github" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.github_url }}">GitHub</a>
-                                </li>
+                            <li v-if="singleuser.github_url">
+                                <i class="fa fa-github" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.github_url }}">GitHub</a>
+                            </li>
 
-                                <li v-if="singleuser.twitter_url">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.twitter_url }}">Twitter</a>
-                                </li>
+                            <li v-if="singleuser.twitter_url">
+                                <i class="fa fa-twitter" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.twitter_url }}">Twitter</a>
+                            </li>
 
-                                <li v-if="singleuser.facebook_url">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.facebook_url }}">Facebook</a>
-                                </li>
+                            <li v-if="singleuser.facebook_url">
+                                <i class="fa fa-facebook" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.facebook_url }}">Facebook</a>
+                            </li>
 
-                                <li v-if="singleuser.linkedin_url">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.linkedin_url }}">LinkedIn</a>
-                                </li>
-                            </ul>
+                            <li v-if="singleuser.linkedin_url">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.linkedin_url }}">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-9">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#posts" data-toggle="tab" aria-expanded="true" v-if="userposts">Posts</a></li>
+                    <li class=""><a href="#profile" data-toggle="tab" aria-expanded="false">Profile</a></li>
+                    <li class=""><a href="#articles" data-toggle="tab" aria-expanded="false">Articles</a></li>
+                    <li class=""><a href="#meetups" data-toggle="tab" aria-expanded="false">Meetups</a></li>
+                </ul>
+
+                <br>
+
+                <div id="tabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="posts">
+                        <div class="panel panel-default">
+                            <form role="form">
+                                <div class="form-group">
+                                    <div class="panel-body">
+                                        <input type="text" class="form-control" placeholder="What´s on your mind..?" v-model="post.body">
+                                        <br>
+                                        <button type="button" class="btn btn-primary btn-sm pull-right" @click.prevent="createPost">
+                                            Publish
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+
+                        <div class="panel panel-default" v-for="post in userposts">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <p class="media-heading"><small class="pull-left">{{ post.created_at | date }}</small> <small class="pull-right"><a href="#" @click.prevent="deletePost(post.id)"><i class="fa fa-times" aria-hidden="true"></i></a></small></p>
+                                        <br>
+                                        <p v-html="post.body | marked"></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-
-                <div class="col-md-9">
-                    <ul class="ca qo anx">
-
-                        <li class="qf b aml">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="What´s on your mind..?" v-model="post.body">
-                                <div class="fj">
-                                    <button type="button" class="cg fm" @click.prevent="createPost">
-                                        Publish
-                                    </button>
-                                </div>
+                    <div class="tab-pane fade" id="profile">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <textarea class="form-control" v-model="intro"></textarea>
+                                <!--<p v-html="singleuser.intro"></p>-->
+                                <br>
+                                <button class="btn btn-success" @click.prevent="saveInfo">Save Changes</button>
                             </div>
-                        </li>
-
-                        <li class="qf b aml" v-for="post in userposts">
-                            <a class="qj" href="/@{{ singleuser.username }}">
-                                <img class="qh cu" v-bind:src="singleuser.avatar" alt="{{ singleuser.username }}">
-                            </a>
-                            <div class="qg">
-                                <div class="qn">
-                                    <small class="eg dp">{{ post.created_at | date }} | <a href="#" @click.prevent="deletePost(post.id)"><i class="fa fa-times" aria-hidden="true"></i></a></small>
-                                    <h5>{{ singleuser.username }}</h5>
-                                </div>
-
-                                <p v-html="post.body | marked"></p>
-                            </div>
-                        </li>
-
-                    </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="articles">
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+                    </div>
+                    <div class="tab-pane fade" id="meetups">
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -110,10 +128,15 @@
             'user'
         ],
 
+        components: {
+            "vue-html-editor": require("vue-html-editor")
+        },
+
         data() {
             return {
                 singleuser: [],
                 userposts: [],
+                intro: [],
                 post: {
                     body: ''
                 }
@@ -127,11 +150,13 @@
         ready() {
             this.getUser();
             this.getPosts();
+            this.createEditor();
         },
 
         methods: {
             getUser() {
                 this.singleuser = this.user;
+                this.intro = this.singleuser.intro;
             },
 
             getPosts() {
@@ -140,23 +165,53 @@
                 });
             },
 
+            saveInfo() {
+                this.$http.post('/intern/profile/info', this.intro).then((response) => {
+                    toastr.success('Your info was successfully updated', '', {timeOut: 3000});
+                }, (response) => {
+                    toastr.error(response.data, 'Something went wrong', {timeOut: 3000});
+                });
+            },
+
+            createEditor() {
+                $(document).ready(function() {
+//                    $('#summernote').summernote({
+//                        airMode: true,
+//                    });
+
+                    $('#summernote').summernote({
+                        height: 300,
+                        minHeight: null,
+                        maxHeight: null,
+                        focus: true,
+                        toolbar: [
+                            ['style', ['bold', 'italic', 'underline', 'clear']],
+                            ['font', ['strikethrough']],
+                            ['color', ['color']],
+                            ['para', ['ul', 'ol', 'paragraph']],
+                            ['height', ['height']]
+                        ]
+                    });
+                });
+            },
+
             createPost() {
                 this.$http.post('/intern/profile/posts', this.post).then((response) => {
-                    this.post = '';
-                    this.getPosts();
-                }, (response) => {
-                    swal("Ooops!", "Something went wrong", "error");
+                        this.post = '';
+                        this.getPosts();
+                    }, (response) => {
+                        swal("Ooops!", "Something went wrong", "error");
                 });
             },
 
             deletePost(id) {
                 this.$http.delete('/intern/profile/posts/'+ id).then((response) => {
-                    this.getPosts();
-                this.getPosts();
-            }, (response) => {
-                    swal("Ooops!", "Something went wrong", "error");
+                        toastr.success('Your post was successfully deleted', '', {timeOut: 3000});
+                        this.getPosts();
+                    }, (response) => {
+                        toastr.error('Something went wrong', '', {timeOut: 3000});
                 });
-            }
+            },
         }
     }
 </script>

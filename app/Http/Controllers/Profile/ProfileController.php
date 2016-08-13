@@ -1,11 +1,11 @@
 <?php
 
-namespace PHPMap\Http\Controllers\Profile;
+namespace App\Http\Controllers\Profile;
 
 use Illuminate\Http\Request;
 
-use PHPMap\Http\Requests;
-use PHPMap\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
 class ProfileController extends Controller
 {

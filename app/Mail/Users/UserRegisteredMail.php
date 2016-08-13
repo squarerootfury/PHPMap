@@ -1,11 +1,11 @@
 <?php
 
-namespace PHPMap\Mail\Users;
+namespace App\Mail\Users;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use PHPMap\User;
+use App\User;
 
 class UserRegisteredMail extends Mailable
 {

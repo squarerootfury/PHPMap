@@ -5,7 +5,7 @@
 
         <div class="row">
             <div class="col-md-6">
-                <textarea class="form-control" v-model="article.body" debounce="300" rows="25" placeholder="# Content"></textarea>
+                <textarea class="form-control" v-model="article.body" rows="25" placeholder="# Content"></textarea>
             </div>
 
             <div class="col-md-6">
@@ -17,7 +17,6 @@
                 <button class="btn btn-default">Create Article</button>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -43,6 +42,7 @@
 
         ready() {
             this.getArticles();
+            this.createEditor();
         },
 
         methods: {
@@ -54,35 +54,15 @@
 
             },
 
+            createEditor() {
+                
+            }
 
         }
     }
 </script>
 
 <style>
-    /*textarea, #editor div {*/
-        /*display: inline-block;*/
-        /*width: 49%;*/
-        /*height: 100%;*/
-        /*vertical-align: top;*/
-        /*-webkit-box-sizing: border-box;*/
-        /*-moz-box-sizing: border-box;*/
-        /*box-sizing: border-box;*/
-        /*padding: 0 20px;*/
-    /*}*/
-
-    /*textarea {*/
-        /*width: 50%;*/
-        /*border: none;*/
-        /*border-right: 1px solid #ccc;*/
-        /*resize: none;*/
-        /*outline: none;*/
-        /*background-color: #f6f6f6;*/
-        /*font-size: 14px;*/
-        /*font-family: 'Monaco', courier, monospace;*/
-        /*padding: 20px;*/
-    /*}*/
-
     code {
         color: #f66;
     }

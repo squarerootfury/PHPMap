@@ -167,11 +167,11 @@ return [
         /*
          * Application Service Providers...
          */
-        PHPMap\Providers\AppServiceProvider::class,
-        // PHPMap\Providers\BroadcastServiceProvider::class,
-        PHPMap\Providers\AuthServiceProvider::class,
-        PHPMap\Providers\EventServiceProvider::class,
-        PHPMap\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+//        App\Providers\BroadcastServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
 
         /*
          * Third Party Service Providers...
@@ -179,8 +179,8 @@ return [
         AlgoliaSearch\Laravel\AlgoliaServiceProvider::class,
 //        Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
-        Conner\Tagging\Providers\TaggingServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
+//        NotificationChannels\OneSignal\OneSignalProvider::class,
 
     ],
 

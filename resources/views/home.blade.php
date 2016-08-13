@@ -19,7 +19,7 @@
 @section('content')
     <homemap></homemap>
 
-    <div class="container">
+    <div class="container-fluid">
         <h1>Test und so</h1>
     </div>
 @stop

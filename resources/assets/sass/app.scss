@@ -5,11 +5,14 @@
 @import "variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "paper/paper";
 
-// Extra
+// Libraries
 @import "node_modules/selectize/dist/css/selectize.bootstrap3";
 @import "node_modules/sweetalert/dev/sweetalert";
-@import "toolkit";
-@import "social";
+@import "node_modules/medium-editor/src/sass/medium-editor";
+@import "node_modules/toastr/toastr";
+
+// Extra
 @import "extra";
