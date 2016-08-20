@@ -47,6 +47,9 @@ Route::get('/test', function () {
 Route::get('/profile', 'Profile\ProfileController@index');
 Route::get('/settings', 'Profile\SettingsController@index');
 
+Route::post('/updateLocation', 'Intern\Profile\LocationController@updateLocation');
+Route::post('/updateAvatar', 'Intern\Profile\AvatarController@updateAvatar');
+
 Route::group(['prefix' => 'backend', 'middleware' => 'admin'], function() {
     Route::get('/', 'Backend\BackendController@index');
     Route::resource('users', 'Backend\Users\UserController');

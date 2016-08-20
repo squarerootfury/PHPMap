@@ -29,6 +29,9 @@ class AuthServiceProvider extends ServiceProvider
         Passport::routes();
 
         Passport::tokensCan([
+            'access-profile' => 'Access your Profile Information',
+            'access-articles' => 'Manage your Article Information',
+            'access-meetups' => 'Manage your Meetup Information',
             'manage-profile' => 'Manage your Profile',
             'manage-articles' => 'Manage your Articles',
             'manage-meetups' => 'Manage your Meetups',
