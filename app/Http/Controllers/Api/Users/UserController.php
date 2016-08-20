@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Users;
 
+use App\Http\Requests\Users\UpdateRequest;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -50,7 +51,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        return response()->json($user);
     }
 
     /**
@@ -71,9 +73,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
-        //
+        $user = User::find($id);
+
+        if ($user->id == $request->user()->id) {
+            $user->update($request->all());
+        }
     }
 
     /**

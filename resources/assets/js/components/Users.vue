@@ -69,7 +69,7 @@
                         '</div>'+
                         '<div class="media-body">'+
                         '<h4 class="media-heading">{{ username }}</h4>'+
-                        '<i class="fa fa-map-marker" aria-hidden="true"></i> {{ city }}'+
+                        '<i class="fa fa-map-marker" aria-hidden="true"></i> {{ address }}'+
                         '</div>'+
                         '</div>'+
                         '</div>'+

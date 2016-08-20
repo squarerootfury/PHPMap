@@ -153,7 +153,7 @@
             },
 
             saveInfo() {
-                this.$http.post('/intern/profile/info', this.intro).then((response) => {
+                this.$http.post('/api/profile/info', this.intro).then((response) => {
                     toastr.success('Your info was successfully updated', '', {timeOut: 3000});
                 }, (response) => {
                     toastr.error(response.data, 'Something went wrong', {timeOut: 3000});
