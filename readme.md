@@ -20,3 +20,4 @@ If you discover a security vulnerability within PHPMap, please send an e-mail to
 ## License
 
 PHPMap is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+`

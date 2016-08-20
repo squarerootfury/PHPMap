@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Events\Users\NewFollower;
+use App\Models\Meetup;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
@@ -86,5 +87,15 @@ class User extends Authenticatable
     function followtoggle(User $user) {
         $this->followers()->toggle($user->id);
 //        event(new NewFollower($this));
+    }
+
+    public function hostedMeetups()
+    {
+        return $this->hasMany(Meetup::class);
+    }
+
+    public function attendsToMeetups()
+    {
+        return $this->belongsToMany(Meetup::class, 'meetup_user');
     }
 }

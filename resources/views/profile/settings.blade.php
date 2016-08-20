@@ -71,7 +71,7 @@
 
 					<div class="row">
 						<div class="col-md-3">
-							<img src="{{ auth()->user()->avatar }}" alt="{{ auth()->user()->username }}" class="img img-responsive">
+							<img src="{{ auth()->user()->avatar }}" alt="{{ auth()->user()->username }}" class="img img-responsive img-thumbnail">
 						</div>
 
 						<div class="col-md-3"></div>

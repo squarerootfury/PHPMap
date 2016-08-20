@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Intern\Profile;
 
+use App\Http\Requests\Users\AvatarRequest;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Intervention\Image\Facades\Image;
 
 class AvatarController extends Controller
 {
@@ -14,11 +16,15 @@ class AvatarController extends Controller
         $this->middleware('auth');
     }
 
-    public function updateAvatar(Request $request)
+    public function updateAvatar(AvatarRequest $request)
     {
         if ($request->user()->avatar != $request->file('avatar'))
         {
-           unlink(storage_path('app/public/'.$request->user()->avatar));
+           try {
+               unlink(storage_path('app/public/'.$request->user()->avatar));
+           } catch (\Exception $e) {
+
+           }
         }
 
         $path = $request->file('avatar')->store('avatars');

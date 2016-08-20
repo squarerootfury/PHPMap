@@ -26,7 +26,6 @@ class UpdateRequest extends FormRequest
         return [
             'name' => 'required|string',
             'email' => 'required|string',
-            'address' => 'required|string',
         ];
     }
 }

@@ -15,5 +15,5 @@
 </li>
 
 <li>
-    <a href="#">Meetups</a>
+    <a href="{{ url('/meetups') }}">Meetups</a>
 </li>

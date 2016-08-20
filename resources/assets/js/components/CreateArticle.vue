@@ -5,7 +5,7 @@
 
         <div class="row">
             <div class="col-md-6">
-                <textarea class="form-control" v-model="article.body" rows="25" placeholder="# Content"></textarea>
+                <textarea class="form-control" v-model="article.body" rows="20" placeholder="# Content"></textarea>
             </div>
 
             <div class="col-md-6">
@@ -14,7 +14,7 @@
 
             <div class="col-md-12">
                 <hr>
-                <button class="btn btn-default">Create Article</button>
+                <button class="btn btn-default" @click.prevent="createArticle">Create Article</button>
             </div>
         </div>
     </div>
