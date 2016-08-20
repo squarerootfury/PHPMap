@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Intern\Profile;
 
+use App\Http\Requests\Users\CreatePostRequest;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -38,7 +39,7 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreatePostRequest $request)
     {
         $post = $request->user()
             ->posts()

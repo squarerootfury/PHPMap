@@ -181,6 +181,7 @@ return [
         Laravel\Passport\PassportServiceProvider::class,
         Laravel\Scout\ScoutServiceProvider::class,
         Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
 
     ],
@@ -233,6 +234,7 @@ return [
          * Third Party Aliases
          */
         'Bugsnag' => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

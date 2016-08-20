@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Mail\Users\SocialSignupMail;
 use Bugsnag\BugsnagLaravel\Facades\Bugsnag;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -23,8 +24,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         User::created(function ($user) {
+            if ($user->github_id != null) {
+                Mail::to($user)
+                    ->queue(new UserRegisteredMail($user));
+            }
+
             Mail::to($user)
-                ->queue(new UserRegisteredMail($user));
+                ->queue(new SocialSignupMail($user));
         });
     }
 

@@ -1,6 +1,6 @@
 <li class="dropdown notifications">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-        <span class="h ws"></span>
+        <i class="fa fa-bell" aria-hidden="true"></i>
     </a>
 
     <ul class="dropdown-menu" role="menu">

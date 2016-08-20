@@ -184,6 +184,8 @@
                                     <button type="submit" class="btn btn-primary">
                                         Register
                                     </button>
+
+                                    <a href="{{ url('/auth/github') }}" class="btn btn-primary">Sign Up with GitHub</a>
                                 </div>
                             </div>
                         </form>

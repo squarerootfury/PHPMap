@@ -94,6 +94,8 @@
                                         Login
                                     </button>
 
+                                    <a href="{{ url('/auth/github') }}" class="btn btn-primary">Sign in with GitHub</a>
+                                    <br>
                                     <a class="btn btn-link" href="{{ url('/password/reset') }}">
                                         Forgot Your Password?
                                     </a>

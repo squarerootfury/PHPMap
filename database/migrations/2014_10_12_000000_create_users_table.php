@@ -25,6 +25,8 @@ class CreateUsersTable extends Migration
 
             $table->boolean('is_admin')->default('0');
 
+            $table->string('github_id')->unique();
+
             $table->string('lat')->nullable();
             $table->string('lng')->nullable();
             $table->string('address')->nullable();
