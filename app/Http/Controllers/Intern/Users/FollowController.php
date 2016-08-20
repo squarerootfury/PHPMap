@@ -10,11 +10,6 @@ use App\User;
 
 class FollowController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function follow(Request $request, $id)
     {
         $user = User::find($id);

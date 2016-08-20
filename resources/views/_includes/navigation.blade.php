@@ -34,6 +34,13 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
+                            @if(auth()->user()->is_admin)
+                                <li>
+                                    <a href="{{ url('/backend') }}">Backend</a>
+                                </li>
+
+                                <li class="divider"></li>
+                            @endif
                             <li>
                                 <a href="{{ url('/profile') }}">My Profile</a>
                             </li>

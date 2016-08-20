@@ -22,7 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('slack_webhook_url')->nullable();
             $table->string('password');
-            $table->string('api_token')->unique();
+
+            $table->boolean('is_admin')->default('0');
 
             $table->string('lat')->nullable();
             $table->string('lng')->nullable();
@@ -38,7 +39,7 @@ class CreateUsersTable extends Migration
             $table->string('facebook_url')->nullable();
             $table->string('linkedin_url')->nullable();
 
-            $table->text('intro')->nullable();
+            $table->longText('intro')->nullable();
 
             $table->rememberToken();
             $table->timestamps();

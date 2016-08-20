@@ -3,7 +3,7 @@
 </li>
 
 <li>
-    <a href="{{ route('users.index') }}">Users</a>
+    <a href="{{ url('users') }}">Users</a>
 </li>
 
 <li>

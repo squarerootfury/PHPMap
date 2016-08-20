@@ -16,14 +16,6 @@ window.swal = require('sweetalert');
 window.marked = require('marked');
 window.toastr = require('toastr');
 
-// import Echo from "laravel-echo"
-//
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: '4dc9a34c3ba97f1d923c',
-//     encrypted: true
-// });
-
 window.toastr.options = {
     "closeButton": false,
     "debug": false,
@@ -40,11 +32,7 @@ window.toastr.options = {
     "hideEasing": "linear",
     "showMethod": "fadeIn",
     "hideMethod": "fadeOut"
-}
-
-// Including Realtime related Libraries
-window.Pusher = require('pusher-js');
-window.Echo = require('laravel-echo');
+};
 
 Vue.filter('date', function (value) {
     return moment(value).format("dddd, MMMM Do YYYY, h:mm:ss a")

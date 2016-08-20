@@ -32,6 +32,7 @@ class UserRegisteredMail extends Mailable
     public function build()
     {
         return $this->view('emails.users.welcome_email')
-            ->subject('Welcome to PHPMap!');
+            ->subject('Welcome to PHPMap!')
+            ->onQueue('emails');
     }
 }

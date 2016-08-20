@@ -155,7 +155,7 @@
             },
 
             getPosts() {
-                this.$http.get('/intern/users/getPosts/'+ this.singleuser.id).then((response) => {
+                this.$http.get('/api/users/getPosts/'+ this.singleuser.id).then((response) => {
                     this.userposts = response.json();
                 });
             },
@@ -165,7 +165,7 @@
             },
 
             followUser(id) {
-                this.$http.post('/intern/users/follow/' + id).then((response) => {
+                this.$http.post('/api/users/follow/' + id).then((response) => {
                         toastr.success(response.data, '', {timeOut: 3000});
                     }, (response) => {
                         console.log(response.data);

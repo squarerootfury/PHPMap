@@ -4,8 +4,8 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-use PHPMap\User;
-use PHPMap\Models\BlogEntry;
+use App\User;
+use App\Models\BlogEntry;
 
 class BlogTest extends TestCase
 {

@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "phpmap/phpmap",
+    "description": "The PHPMap Source.",
+    "keywords": ["phpmap", "laravel"],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -9,11 +9,13 @@
         "laravel/framework": "5.3.*",
         "pusher/pusher-php-server": "^2.4",
         "pda/pheanstalk": "^3.1",
-        "algolia/algoliasearch-laravel": "^1.2",
         "spatie/laravel-permission": "^1.5",
         "guzzlehttp/guzzle": "^6.2",
         "spatie/laravel-backup": "^3.9",
-        "laravel-notification-channels/onesignal": "dev-master"
+        "laravel/passport": "^1.0@dev",
+        "laravel/scout": "^1.0@dev",
+        "algolia/algoliasearch-client-php": "^1.10",
+        "bugsnag/bugsnag-laravel": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

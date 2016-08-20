@@ -2,9 +2,11 @@
 
 namespace App;
 
+use App\Events\Users\NewFollower;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use AlgoliaSearch\Laravel\AlgoliaEloquentTrait;
+use Laravel\Passport\HasApiTokens;
+use Laravel\Scout\Searchable;
 
 use App\Models\BlogEntry;
 use App\Models\UserPost;
@@ -12,7 +14,7 @@ use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use Notifiable, AlgoliaEloquentTrait, HasRoles;
+    use Notifiable, HasRoles, HasApiTokens, Searchable;
 
     /**
      * The attributes that are mass assignable.
@@ -20,7 +22,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'username', 'avatar', 'profile_cover', 'email', 'slack_webhook_url', 'password', 'api_token', 'lat', 'lng', 'address', 'city', 'country', 'company', 'intro', 'website', 'github_url', 'twitter_url', 'facebook_url', 'linkedin_url'
+        'name', 'username', 'avatar', 'profile_cover', 'email', 'slack_webhook_url', 'password', 'is_admin', 'lat', 'lng', 'address', 'city', 'country', 'company', 'intro', 'website', 'github_url', 'twitter_url', 'facebook_url', 'linkedin_url'
     ];
 
     /**
@@ -29,54 +31,18 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token', 'slack_webhook_url', 'api_token'
+        'password', 'remember_token', 'slack_webhook_url'
     ];
 
-    public static $autoIndex = true;
-    public static $autoDelete = true;
-    public $indices = ['users'];
-
-    public $algoliaSettings = [
-        'attributesToIndex' => [
-            'name', 'username', 'avatar', 'email', 'lat', 'lng', 'address', 'city', 'country', 'company', 'website', 'created_at'
-        ],
-        'customRanking' => [
-            'asc(created_at)',
-        ],
-        'attributesForFaceting' => [
-            'city', 'country'
-        ],
-        'attributesToRetrieve' => [
-            'name', 'username', 'avatar', 'email', 'lat', 'lng', 'address', 'city', 'country', 'company', 'website'
-        ],
-        'attributesToHighlight' => [
-            'name', 'username', 'city', 'county', 'company'
-        ]
+    protected $casts = [
+        'is_admin' => 'boolean'
     ];
 
-    public function getAlgoliaRecord()
-    {
-        $this->blog_entries();
-        $this->posts();
-
-        return $this->toArray();
-    }
-
-    /**
-     * Route notifications for the mail channel.
-     *
-     * @return string
-     */
     public function routeNotificationForMail()
     {
         return $this->email;
     }
 
-    /**
-     * Route notifications for the Slack channel.
-     *
-     * @return string
-     */
     public function routeNotificationForSlack()
     {
         return $this->slack_webhook_url;
@@ -119,10 +85,6 @@ class User extends Authenticatable
 
     function followtoggle(User $user) {
         $this->followers()->toggle($user->id);
-    }
-
-    public function routeNotificationForOneSignal()
-    {
-        return 'ONE_SIGNAL_PLAYER_ID';
+//        event(new NewFollower($this));
     }
 }

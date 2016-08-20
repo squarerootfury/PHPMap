@@ -168,7 +168,7 @@ return [
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
-//        App\Providers\BroadcastServiceProvider::class,
+        App\Providers\BroadcastServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
@@ -176,11 +176,12 @@ return [
         /*
          * Third Party Service Providers...
          */
-        AlgoliaSearch\Laravel\AlgoliaServiceProvider::class,
-//        Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
-//        NotificationChannels\OneSignal\OneSignalProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
+        Laravel\Scout\ScoutServiceProvider::class,
+        Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
+
 
     ],
 
@@ -231,6 +232,7 @@ return [
         /*
          * Third Party Aliases
          */
+        'Bugsnag' => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
 
     ],
 

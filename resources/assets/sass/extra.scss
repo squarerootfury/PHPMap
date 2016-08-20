@@ -1,5 +1,4 @@
 #footer {
-  color: lightgray;
   padding-top: 15px;
   height: 50px;
   background-color: #fff;
@@ -8,6 +7,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  color: grey;
 }
 
 html {
@@ -15,7 +15,6 @@ html {
   min-height: 100%;
 }
 body {
-  /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
 

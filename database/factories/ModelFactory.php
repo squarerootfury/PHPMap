@@ -24,7 +24,6 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'avatar' => 'https://www.gravatar.com/avatar/04d24379cd970b7670ee66fa203d646f?s=80&r=any&default=identicon&forcedefault=1',
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
-        'api_token' => str_random(20).'.'.str_random(5).'_'.str_random(15)
     ];
 });
 

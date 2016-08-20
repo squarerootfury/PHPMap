@@ -2,10 +2,16 @@
 
 namespace App\Providers;
 
+use Bugsnag\BugsnagLaravel\Facades\Bugsnag;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\ServiceProvider;
+
 use App\Mail\Users\UserRegisteredMail;
+
+
 use App\User;
+use Psr\Log\LoggerInterface;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,7 +23,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         User::created(function ($user) {
-            Mail::to($user)->send(new UserRegisteredMail($user));
+            Mail::to($user)
+                ->queue(new UserRegisteredMail($user));
         });
     }
 
@@ -28,6 +35,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->alias('bugsnag.logger', Log::class);
+        $this->app->alias('bugsnag.logger', LoggerInterface::class);
+
         if ($this->app->environment() == 'local') {
             $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
         }

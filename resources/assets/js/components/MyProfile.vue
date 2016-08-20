@@ -64,7 +64,6 @@
             <div class="col-md-9">
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#posts" data-toggle="tab" aria-expanded="true" v-if="userposts">Posts</a></li>
-                    <li class=""><a href="#profile" data-toggle="tab" aria-expanded="false">Profile</a></li>
                     <li class=""><a href="#articles" data-toggle="tab" aria-expanded="false">Articles</a></li>
                     <li class=""><a href="#meetups" data-toggle="tab" aria-expanded="false">Meetups</a></li>
                 </ul>
@@ -74,7 +73,7 @@
                 <div id="tabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="posts">
                         <div class="panel panel-default">
-                            <form role="form">
+                            <form role="form" class="form">
                                 <div class="form-group">
                                     <div class="panel-body">
                                         <input type="text" class="form-control" placeholder="What´s on your mind..?" v-model="post.body">
@@ -92,21 +91,13 @@
                             <div class="panel-body">
                                 <div class="media">
                                     <div class="media-body">
-                                        <p class="media-heading"><small class="pull-left">{{ post.created_at | date }}</small> <small class="pull-right"><a href="#" @click.prevent="deletePost(post.id)"><i class="fa fa-times" aria-hidden="true"></i></a></small></p>
+                                        <p class="media-heading"><small class="pull-left">{{ post.created_at | date }}</small> <small class="pull-right"><a href="#" @click.prevent="deletePost(post.id)">
+                                            <!--<i class="fa fa-times" aria-hidden="true"></i>-->x
+                                        </a></small></p>
                                         <br>
                                         <p v-html="post.body | marked"></p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="profile">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <textarea class="form-control" v-model="intro"></textarea>
-                                <!--<p v-html="singleuser.intro"></p>-->
-                                <br>
-                                <button class="btn btn-success" @click.prevent="saveInfo">Save Changes</button>
                             </div>
                         </div>
                     </div>
@@ -127,10 +118,6 @@
         props: [
             'user'
         ],
-
-        components: {
-            "vue-html-editor": require("vue-html-editor")
-        },
 
         data() {
             return {
@@ -160,7 +147,7 @@
             },
 
             getPosts() {
-                this.$http.get('/intern/profile/posts').then((response) => {
+                this.$http.get('/api/profile/posts').then((response) => {
                     this.userposts = response.json();
                 });
             },
@@ -196,16 +183,16 @@
             },
 
             createPost() {
-                this.$http.post('/intern/profile/posts', this.post).then((response) => {
+                this.$http.post('/api/profile/posts', this.post).then((response) => {
                         this.post = '';
                         this.getPosts();
                     }, (response) => {
-                        swal("Ooops!", "Something went wrong", "error");
+                    toastr.error('Something went wrong', '', {timeOut: 3000});
                 });
             },
 
             deletePost(id) {
-                this.$http.delete('/intern/profile/posts/'+ id).then((response) => {
+                this.$http.delete('/api/profile/posts/'+ id).then((response) => {
                         toastr.success('Your post was successfully deleted', '', {timeOut: 3000});
                         this.getPosts();
                     }, (response) => {

@@ -25,14 +25,6 @@ Route::get('@{username}', 'Users\UserController@show');
 Route::resource('blogs', 'Blog\UserController');
 Route::resource('blogs.articles', 'Blog\ArticleController');
 
-Route::group(['prefix' => 'intern'], function () {
-    Route::resource('usr', 'Intern\Users\UserController');
-    Route::resource('profile/posts', 'Intern\Profile\PostController');
-    Route::post('profile/info', 'Intern\Profile\InfoController@update');
-
-    Route::get('users/getPosts/{id}', 'Intern\Users\PostController@get');
-    Route::post('users/follow/{id}', 'Intern\Users\FollowController@follow');
-});
 
 Route::get('/test', function () {
 //    $users = factory(\PHPMap\User::class, 10)->create();
@@ -50,3 +42,10 @@ Route::get('/test', function () {
 });
 
 Route::get('/profile', 'Profile\ProfileController@index');
+Route::get('/settings', 'Profile\SettingsController@index');
+
+Route::group(['prefix' => 'backend', 'middleware' => 'admin'], function() {
+    Route::get('/', 'Backend\BackendController@index');
+    Route::resource('users', 'Backend\Users\UserController');
+    Route::resource('articles', 'Backend\Blogs\ArticleController');
+});
