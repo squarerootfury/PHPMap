@@ -28,7 +28,7 @@
             },
 
             createMap(map, options) {
-                this.$http.get('/api/users').then(response => {
+                this.$http.get('/public/users').then(response => {
                     this.users = response.json();
 
                     var users = this.users;

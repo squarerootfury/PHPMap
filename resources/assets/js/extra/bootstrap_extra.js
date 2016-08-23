@@ -16,6 +16,10 @@ window.swal = require('sweetalert');
 window.marked = require('marked');
 window.toastr = require('toastr');
 
+window.Dropzone = require('dropzone');
+window.Multiselect = require('vue-multiselect');
+
+
 window.toastr.options = {
     "closeButton": false,
     "debug": false,

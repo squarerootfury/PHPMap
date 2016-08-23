@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2fb75eecc18a8b9690fc657cea07a266",
-    "content-hash": "443ee885ccde56ac9d9ddffc159605f2",
+    "hash": "3b1eff4277d5af063b104d806eccb0e0",
+    "content-hash": "3e8b68e789f0758c29a6e4aa7106a3c0",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -445,16 +445,16 @@
         },
         {
             "name": "firebase/php-jwt",
-            "version": "v3.0.0",
+            "version": "v4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "fa8a06e96526eb7c0eeaa47e4f39be59d21f16e1"
+                "reference": "dccf163dc8ed7ed6a00afc06c51ee5186a428d35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/fa8a06e96526eb7c0eeaa47e4f39be59d21f16e1",
-                "reference": "fa8a06e96526eb7c0eeaa47e4f39be59d21f16e1",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/dccf163dc8ed7ed6a00afc06c51ee5186a428d35",
+                "reference": "dccf163dc8ed7ed6a00afc06c51ee5186a428d35",
                 "shasum": ""
             },
             "require": {
@@ -484,7 +484,7 @@
             ],
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
-            "time": "2015-07-22 18:31:08"
+            "time": "2016-07-18 04:51:16"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -917,16 +917,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.3.0-RC1",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "6b76cecef3fcbad07eb1ab7b15a05563a18d3e0a"
+                "reference": "7d116dc5a008e69c97f864af79ac46ab6a8d5895"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/6b76cecef3fcbad07eb1ab7b15a05563a18d3e0a",
-                "reference": "6b76cecef3fcbad07eb1ab7b15a05563a18d3e0a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/7d116dc5a008e69c97f864af79ac46ab6a8d5895",
+                "reference": "7d116dc5a008e69c97f864af79ac46ab6a8d5895",
                 "shasum": ""
             },
             "require": {
@@ -1040,24 +1040,24 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-08-17 15:05:00"
+            "time": "2016-08-23 13:04:04"
         },
         {
             "name": "laravel/passport",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/passport.git",
-                "reference": "8845a8071239d9c107c932fe49e02cfec8cd99ce"
+                "reference": "55fb99f5feb3572634b6d37a8aa43bd8a7148960"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/passport/zipball/8845a8071239d9c107c932fe49e02cfec8cd99ce",
-                "reference": "8845a8071239d9c107c932fe49e02cfec8cd99ce",
+                "url": "https://api.github.com/repos/laravel/passport/zipball/55fb99f5feb3572634b6d37a8aa43bd8a7148960",
+                "reference": "55fb99f5feb3572634b6d37a8aa43bd8a7148960",
                 "shasum": ""
             },
             "require": {
-                "firebase/php-jwt": "~3.0",
+                "firebase/php-jwt": "~4.0",
                 "guzzlehttp/guzzle": "~6.0",
                 "illuminate/auth": "~5.3",
                 "illuminate/console": "~5.3",
@@ -1104,20 +1104,20 @@
                 "oauth",
                 "passport"
             ],
-            "time": "2016-08-20 15:17:42"
+            "time": "2016-08-23 12:49:27"
         },
         {
             "name": "laravel/scout",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/scout.git",
-                "reference": "799e95a98c8a06a3050abbe448aad3a7bc67711f"
+                "reference": "fdf4030d6921aec38c51cf546fd28e8672cbc878"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/scout/zipball/799e95a98c8a06a3050abbe448aad3a7bc67711f",
-                "reference": "799e95a98c8a06a3050abbe448aad3a7bc67711f",
+                "url": "https://api.github.com/repos/laravel/scout/zipball/fdf4030d6921aec38c51cf546fd28e8672cbc878",
+                "reference": "fdf4030d6921aec38c51cf546fd28e8672cbc878",
                 "shasum": ""
             },
             "require": {
@@ -1164,7 +1164,7 @@
                 "laravel",
                 "search"
             ],
-            "time": "2016-08-20 15:15:29"
+            "time": "2016-08-22 00:18:05"
         },
         {
             "name": "laravel/socialite",
@@ -2030,16 +2030,16 @@
         },
         {
             "name": "pusher/pusher-php-server",
-            "version": "v2.5.0",
+            "version": "v2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pusher/pusher-http-php.git",
-                "reference": "04535a46f8133fbeef656646846e1a4c43eeaa6f"
+                "reference": "cdc11530c6f97eab76850d8ead6c513eeeccc37a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pusher/pusher-http-php/zipball/04535a46f8133fbeef656646846e1a4c43eeaa6f",
-                "reference": "04535a46f8133fbeef656646846e1a4c43eeaa6f",
+                "url": "https://api.github.com/repos/pusher/pusher-http-php/zipball/cdc11530c6f97eab76850d8ead6c513eeeccc37a",
+                "reference": "cdc11530c6f97eab76850d8ead6c513eeeccc37a",
                 "shasum": ""
             },
             "require": {
@@ -2070,7 +2070,7 @@
                 "rest",
                 "trigger"
             ],
-            "time": "2016-08-15 16:34:36"
+            "time": "2016-08-23 09:07:29"
         },
         {
             "name": "ramsey/uuid",
@@ -4916,7 +4916,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "laravel/passport": 20,
         "laravel/scout": 20
