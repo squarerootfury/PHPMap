@@ -40,10 +40,10 @@ window.toastr.options = {
 
 Vue.filter('date', function (value) {
     return moment(value).format("dddd, MMMM Do YYYY, h:mm:ss a")
-});
+})
 
 Vue.filter('limit', function (value) {
      if(value.length > 401) {
         string = value.substring(0,400)+"...";
      }
-});
+})
