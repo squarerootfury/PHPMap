@@ -99,7 +99,7 @@
                         <div class="panel panel-default" v-for="article in userarticles">
                             <div class="panel-body">
                                 <h4>{{ article.title }}</h4>
-                                <p>{{ article.body | limit }}</p>
+                                <p>{{ article.excerpt }}</p>
                             </div>
                         </div>
 

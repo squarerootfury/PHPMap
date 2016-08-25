@@ -23,6 +23,7 @@ class CreateBlogEntriesTable extends Migration
             $table->string('slug');
             
             $table->longText('body');
+            $table->string('excerpt');
 
             $table->timestamps();
         });
