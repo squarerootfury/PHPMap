@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Users;
 
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;

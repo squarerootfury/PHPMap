@@ -31,9 +31,9 @@ Route::resource('blogs.articles', 'Blog\ArticleController');
 
 
 Route::get('/test', function () {
-//    $users = factory(\PHPMap\User::class, 10)->create();
+   $users = factory(\App\User::class, 10)->create();
 
-    return auth()->user()->followers;
+    //return auth()->user()->followers;
 //    return str_random(20).'.'.str_random(5).'_'.str_random(15);
 
 //    $user = \PHPMap\User::findByUsername('fwartner');

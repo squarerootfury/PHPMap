@@ -21,6 +21,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'address' => $faker->streetAddress,
         'city' => $faker->city,
         'country' => $faker->country,
+        'github_id' => str_random(3),
         'avatar' => 'https://www.gravatar.com/avatar/04d24379cd970b7670ee66fa203d646f?s=80&r=any&default=identicon&forcedefault=1',
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
