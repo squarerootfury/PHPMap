@@ -166,7 +166,7 @@
             },
 
             followUser(id) {
-                this.$http.post('/api/users/follow/' + id).then((response) => {
+                this.$http.post('/public/users/follow/' + id).then((response) => {
                         toastr.success(response.data, '', {timeOut: 3000});
                     }, (response) => {
                         console.log(response.data);
