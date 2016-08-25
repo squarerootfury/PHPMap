@@ -31,6 +31,7 @@ class AppServiceProvider extends ServiceProvider
 
             Mail::to($user)
                 ->queue(new SocialSignupMail($user));
+            $user->searchable();
         });
     }
 
