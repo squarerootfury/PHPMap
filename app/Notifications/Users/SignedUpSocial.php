@@ -47,7 +47,7 @@ class SignedUpSocial extends Notification implements ShouldQueue
                     ->subject('Welcome to PHPMap!')
                     ->line('You have successfully singed up to PHPMap!')
                     ->action('Visit your Profile', 'https://phpmap.co/@'.$this->user->username)
-                    ->line('Your temporary password is "PHPMap_'. $this->user->username .'_TEMP"');
+                    ->line('Your temporary password is "<strong>PHPMap_'. $this->user->username .'_TEMP</strong>strong>"');
     }
 
     /**
