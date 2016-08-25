@@ -149,7 +149,6 @@
 
         filters: {
             marked: marked,
-            limit: limit
         },
 
         ready() {

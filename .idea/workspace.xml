@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dfee9ed-85fc-467a-ab30-83250e86a465" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/BlogEntry.php" afterPath="$PROJECT_DIR$/app/Models/BlogEntry.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_08_07_004740_create_blog_entries_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_08_07_004740_create_blog_entries_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/components/SingleUser.vue" afterPath="$PROJECT_DIR$/resources/assets/js/components/SingleUser.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/extra/bootstrap_extra.js" afterPath="$PROJECT_DIR$/resources/assets/js/extra/bootstrap_extra.js" />
     </list>
     <ignored path="phpmap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,8 +56,8 @@
       <file leaf-file-name="SingleUser.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/assets/js/components/SingleUser.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -156,9 +153,9 @@
         <option value="$PROJECT_DIR$/routes/public.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ApiPublic/UserArticleController.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/extra/bootstrap_extra.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/components/SingleUser.vue" />
         <option value="$PROJECT_DIR$/database/migrations/2016_08_07_004740_create_blog_entries_table.php" />
         <option value="$PROJECT_DIR$/app/Models/BlogEntry.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/components/SingleUser.vue" />
       </list>
     </option>
   </component>
@@ -659,12 +656,12 @@
       <workItem from="1471725469894" duration="5118000" />
       <workItem from="1471775370957" duration="3432000" />
       <workItem from="1472142947167" duration="30000" />
-      <workItem from="1472143017947" duration="6924000" />
+      <workItem from="1472143017947" duration="6991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41056000" />
+    <option name="totallyTimeSpent" value="41123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="842" extended-state="6" />
@@ -1106,8 +1103,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/components/SingleUser.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
           <folding />
         </state>
       </provider>
