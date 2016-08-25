@@ -29,7 +29,7 @@ class AvatarController extends Controller
 
         $path = $request->file('avatar')->store('avatars');
         $request->user()->update([
-            'avatar' => $path
+            'avatar' => 'storage/'.$path
         ]);
 
         return back();
