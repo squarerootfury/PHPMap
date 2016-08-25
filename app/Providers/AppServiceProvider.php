@@ -26,12 +26,10 @@ class AppServiceProvider extends ServiceProvider
         User::created(function ($user) {
             if (!$user->github_id === null) {
                 Mail::to($user)
-                    ->onQueue('emails')
                     ->queue(new UserRegisteredMail($user));
             } else {
                 Mail::to($user)
-                    ->onQueue('emails')
-                    ->queue(new SocialSignupMail($user));
+´                    ->queue(new SocialSignupMail($user));
             }
         });
     }
