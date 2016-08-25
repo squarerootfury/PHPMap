@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         User::created(function ($user) {
-            if ($user->github_id === null) {
+            if (!$user->github_id === null) {
                 Mail::to($user)
                     ->queue(new UserRegisteredMail($user));
             }
