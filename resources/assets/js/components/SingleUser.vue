@@ -122,7 +122,7 @@
                             </div>
                             <div class="media-body">
                                 <h5 class="media-heading">{{ user.username }}</h5>
-                                <i class="fa fa-map-marker" aria-hidden="true"></i> {{ user.address }}
+                                <i class="fa fa-map-marker" aria-hidden="true"></i> {{ user.city }}, {{ country }}
                             </div>
                         </div>
                     </div>

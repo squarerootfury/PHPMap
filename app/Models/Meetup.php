@@ -3,12 +3,13 @@
 namespace App\Models;
 
 use App\User;
+use GetStream\StreamLaravel\Eloquent\ActivityTrait;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
 
 class Meetup extends Model
 {
-    use Searchable;
+    use Searchable, ActivityTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -23,6 +24,11 @@ class Meetup extends Model
         'published' => 'boolean'
     ];
 
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
     public function host()
     {
         return $this->belongsTo(User::class);
@@ -31,5 +37,19 @@ class Meetup extends Model
     public function attendees()
     {
         return $this->hasMany(User::class, 'meetup_user');
+    }
+
+    /*
+     * getstream.io Stuff
+     */
+
+    public function activityActorMethodName()
+    {
+        return 'author';
+    }
+
+    public function activityVerb()
+    {
+        return 'pin';
     }
 }
