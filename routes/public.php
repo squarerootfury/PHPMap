@@ -1,6 +1,6 @@
 <?php
 
-Route::get('users', 'Users\UserController@index');
+Route::get('users', 'ApiPublic\UserController@index');
 Route::get('users/getPosts/{id}', 'ApiPublic\PostController@show');
 
 Route::get('users/getArticles/{id}', 'ApiPublic\UserArticleController@show');
