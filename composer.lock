@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b455e41bae27dc0cab5783f61556c02a",
-    "content-hash": "92369c916fbb428c51e7cf640f2dfe56",
+    "hash": "11132e1fdb03dae924d14d29320ee337",
+    "content-hash": "f13e2e298a87cce278af753d27e27cac",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -917,16 +917,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.3.0",
+            "version": "v5.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7d116dc5a008e69c97f864af79ac46ab6a8d5895"
+                "reference": "7159ffbadc79558a42ece2cdd1ec2e7e13105b5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7d116dc5a008e69c97f864af79ac46ab6a8d5895",
-                "reference": "7d116dc5a008e69c97f864af79ac46ab6a8d5895",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/7159ffbadc79558a42ece2cdd1ec2e7e13105b5d",
+                "reference": "7159ffbadc79558a42ece2cdd1ec2e7e13105b5d",
                 "shasum": ""
             },
             "require": {
@@ -1040,7 +1040,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-08-23 13:04:04"
+            "time": "2016-08-26 21:40:26"
         },
         {
             "name": "laravel/passport",
@@ -2267,21 +2267,21 @@
         },
         {
             "name": "spatie/laravel-permission",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-permission.git",
-                "reference": "5b06b18f5e6dace43b54f4c6237751ce0ff1f95e"
+                "reference": "554e43d5576d1c4c723d19774e7e6f34c7c41e9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/5b06b18f5e6dace43b54f4c6237751ce0ff1f95e",
-                "reference": "5b06b18f5e6dace43b54f4c6237751ce0ff1f95e",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/554e43d5576d1c4c723d19774e7e6f34c7c41e9b",
+                "reference": "554e43d5576d1c4c723d19774e7e6f34c7c41e9b",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "^5.1",
-                "laravel/framework": "^5.1.11",
+                "illuminate/contracts": "~5.1.0|~5.2.0|~5.3.0",
+                "laravel/framework": "~5.1.11|~5.2.0|~5.3.0",
                 "php": ">=5.6.0"
             },
             "require-dev": {
@@ -2316,7 +2316,7 @@
                 "security",
                 "spatie"
             ],
-            "time": "2016-07-23 22:52:29"
+            "time": "2016-08-26 07:17:52"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4058,16 +4058,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.5.3",
+            "version": "5.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "08745ede58cb02b4043adadc09a01c09e698e3f7"
+                "reference": "3e6e88e56c912133de6e99b87728cca7ed70c5f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/08745ede58cb02b4043adadc09a01c09e698e3f7",
-                "reference": "08745ede58cb02b4043adadc09a01c09e698e3f7",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3e6e88e56c912133de6e99b87728cca7ed70c5f5",
+                "reference": "3e6e88e56c912133de6e99b87728cca7ed70c5f5",
                 "shasum": ""
             },
             "require": {
@@ -4132,20 +4132,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-08-25 04:45:28"
+            "time": "2016-08-26 07:11:44"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.2.5",
+            "version": "3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "8f444748e174e49d5bd2bd7a9bebbf44edbb55fb"
+                "reference": "46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/8f444748e174e49d5bd2bd7a9bebbf44edbb55fb",
-                "reference": "8f444748e174e49d5bd2bd7a9bebbf44edbb55fb",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49",
+                "reference": "46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49",
                 "shasum": ""
             },
             "require": {
@@ -4191,7 +4191,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2016-08-24 16:58:26"
+            "time": "2016-08-26 05:51:59"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

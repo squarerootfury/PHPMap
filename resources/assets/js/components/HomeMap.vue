@@ -7,7 +7,7 @@
     export default {
         data() {
             return {
-                users: [],
+                users: []
             };
         },
 
@@ -31,9 +31,9 @@
                 this.$http.get('/public/users').then(response => {
                     this.users = response.json();
 
-                    var users = this.users;
+                    var all = this.users;
 
-                    users.forEach(function (user) {
+                    all.forEach(function (user) {
                         var usr = {
                             name: user.name,
                             username: user.username,

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Api\ApiPublic;
+namespace App\Http\Controllers\ApiPublic;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class MeetupController extends Controller
+class ArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
