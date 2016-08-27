@@ -68,8 +68,8 @@
                         '<a href="/@{{ username }}"><img style="max-height: 68px;" class="media-object" src="{{ avatar }}" alt="{{ username }}"></a>'+
                         '</div>'+
                         '<div class="media-body">'+
-                        '<h4 class="media-heading">{{ username }}</h4>'+
-                        '<i class="fa fa-map-marker" aria-hidden="true"></i> {{ address }}'+
+                        '<h5 class="media-heading">{{ username }}</h4>'+
+                        '<i class="fa fa-map-marker" aria-hidden="true"></i> {{ country }}'+
                         '</div>'+
                         '</div>'+
                         '</div>'+

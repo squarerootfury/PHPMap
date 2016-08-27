@@ -12,7 +12,6 @@
     <script>
         var placesAutocomplete = places({
             container: document.querySelector('#address-input'),
-            type: 'city'
         });
 
         placesAutocomplete.on('change', e => this.updateLatLng(e));
