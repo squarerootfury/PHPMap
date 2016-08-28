@@ -33,7 +33,7 @@
                             </li>
 
                             <li v-if="singleuser.city">
-                                <i class="fa fa-home" aria-hidden="true"></i> &nbsp; {{ user.city }}
+                                <i class="fa fa-home" aria-hidden="true"></i> &nbsp; {{ user.country }}
                             </li>
 
                             <li v-if="singleuser.website">
