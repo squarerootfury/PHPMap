@@ -6,9 +6,9 @@
     <a href="{{ url('users') }}">Users</a>
 </li>
 
-<li>
-    <a href="{{ route('blogs.index') }}">Blogs</a>
-</li>
+{{--<li>--}}
+    {{--<a href="{{ route('blogs.index') }}">Blogs</a>--}}
+{{--</li>--}}
 
 {{--<li>--}}
     {{--<a href="https://jobs.phpmap.co">Jobs</a>--}}
