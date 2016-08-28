@@ -20,6 +20,10 @@
     <homemap></homemap>
 
     <div class="container">
+        <div class="alert alert-success" role="alert">
+            <h4 class="text-center">PHPMap is still in development. Feel free to contribute on <a href="https://github.com/PHPMap/PHPMap">GitHub</a>.</h4>
+        </div>
+
         <div class="row">
             <div class="col-md-3">
                 <h3>Collaborate</h3>
