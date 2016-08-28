@@ -65,8 +65,8 @@
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#posts" data-toggle="tab" aria-expanded="true" v-if="userposts">Posts</a></li>
                     <li class=""><a href="#profile" data-toggle="tab" aria-expanded="false" v-if="singleuser.intro">Profile</a></li>
-                    <li class=""><a href="#articles" data-toggle="tab" aria-expanded="false">Articles</a></li>
-                    <li class=""><a href="#meetups" data-toggle="tab" aria-expanded="false">Meetups</a></li>
+                    <!--<li class=""><a href="#articles" data-toggle="tab" aria-expanded="false">Articles</a></li>-->
+                    <!--<li class=""><a href="#meetups" data-toggle="tab" aria-expanded="false">Meetups</a></li>-->
                 </ul>
 
                 <br>
