@@ -10,10 +10,10 @@
     <a href="{{ route('blogs.index') }}">Blogs</a>
 </li>
 
-<li>
-    <a href="https://jobs.phpmap.co">Jobs</a>
-</li>
+{{--<li>--}}
+    {{--<a href="https://jobs.phpmap.co">Jobs</a>--}}
+{{--</li>--}}
 
-<li>
-    <a href="{{ url('/meetups') }}">Meetups</a>
-</li>
+{{--<li>--}}
+    {{--<a href="{{ url('/meetups') }}">Meetups</a>--}}
+{{--</li>--}}

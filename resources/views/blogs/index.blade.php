@@ -13,5 +13,5 @@
 @stop
 
 @section('content')
-    <createarticle></createarticle>
+    <articles></articles>
 @stop

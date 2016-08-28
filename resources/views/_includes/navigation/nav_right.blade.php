@@ -1,8 +1,8 @@
-<li>
-    <a href="{{ url('/timeline') }}">Timeline</a>
-</li>
+{{--<li>--}}
+    {{--<a href="{{ url('/timeline') }}">Timeline</a>--}}
+{{--</li>--}}
 
-@if(auth()->user()->notifications->count())
+@if(auth()->user()->notifications()->count())
 <li class="dropdown notifications">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
         <i class="fa fa-bell" aria-hidden="true"></i>

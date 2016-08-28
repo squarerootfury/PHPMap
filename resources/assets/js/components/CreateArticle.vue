@@ -28,7 +28,6 @@
 
         data() {
             return {
-                articles: [],
                 article: {
                     title: '',
                     body: '# Content'
@@ -42,22 +41,12 @@
 
         ready() {
             this.getArticles();
-            this.createEditor();
         },
 
         methods: {
-            getArticles() {
-
-            },
-
             createArticle() {
 
-            },
-
-            createEditor() {
-
             }
-
         }
     }
 </script>

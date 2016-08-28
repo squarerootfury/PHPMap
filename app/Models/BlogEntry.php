@@ -28,7 +28,6 @@ class BlogEntry extends Model
     /*
      * getstream.io Stuff
      */
-
     public function activityActorMethodName()
     {
         return 'author';

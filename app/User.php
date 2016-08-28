@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Models\Meetup;
+use App\Models\Notification;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
@@ -63,6 +64,11 @@ class User extends Authenticatable
         return self::where('city', $city)->get();
     }
 
+    public function notifications()
+    {
+        return $this->hasMany(Notification::class, 'notifiable_id');
+    }
+    
     public function blog_entries()
     {
         return $this->hasMany(BlogEntry::class);

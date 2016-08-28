@@ -22,22 +22,12 @@ Vue.component('myprofile', require('./components/MyProfile.vue'));
 Vue.component('createarticle', require('./components/CreateArticle.vue'));
 Vue.component('profilesettings', require('./components/ProfileSettings.vue'));
 Vue.component('accountsettings', require('./components/AccountSettings.vue'));
+Vue.component('articles', require('./components/Articles.vue'));
 
 // Passport Components
-Vue.component(
-    'passport-clients',
-    require('./components/passport/Clients.vue')
-);
-
-Vue.component(
-    'passport-authorized-clients',
-    require('./components/passport/AuthorizedClients.vue')
-);
-
-Vue.component(
-    'passport-personal-access-tokens',
-    require('./components/passport/PersonalAccessTokens.vue')
-);
+Vue.component('passport-clients', require('./components/passport/Clients.vue'));
+Vue.component('passport-authorized-clients', require('./components/passport/AuthorizedClients.vue'));
+Vue.component('passport-personal-access-tokens', require('./components/passport/PersonalAccessTokens.vue'));
 
 const app = new Vue({
     el: '#app'

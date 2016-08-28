@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\ApiPublic;
 
+use App\Models\BlogEntry;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -16,7 +17,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $articles = BlogEntry::all();
+        return response()->json($articles);
     }
 
     /**
@@ -43,12 +45,13 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $article = BlogEntry::findBySlug($slug);
+        return response()->json($article);
     }
 
     /**
