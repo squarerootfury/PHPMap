@@ -13,8 +13,6 @@
 
     @yield('styles')
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_KEY') }}"></script>
-
     <script>
         window.Laravel = <?php echo json_encode([
                 'csrfToken' => csrf_token(),
@@ -38,6 +36,7 @@
     </script>
 
     @yield('footer_scripts')
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_KEY') }}"></script>
     <script src="{{ elixir('js/app.js') }}"></script>
     @yield('scripts')
 
