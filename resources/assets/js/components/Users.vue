@@ -46,6 +46,13 @@
         },
 
         methods: {
+            initEcho() {
+                Echo.channel('users')
+                        .listen('UserSignedUp', (e) => {
+                    this.initSearch();
+                });
+            },
+
             initSearch() {
                 var search = instantsearch({
                     appId: '9JUTOYSC0P',

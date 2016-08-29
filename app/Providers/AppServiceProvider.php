@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Events\Users\UserSignedUp;
 use App\Mail\Users\SocialSignupMail;
 use App\Notifications\Users\SignedUp;
 use App\Notifications\Users\SignedUpSocial;
@@ -28,9 +29,13 @@ class AppServiceProvider extends ServiceProvider
         User::created(function ($user) {
             if (!$user->github_id === null) {
                 $user->notify(new SignedUp($user));
+
+                event(new UserSignedUp());
             }
 
             $user->notify(new SignedUpSocial($user));
+
+            event(new UserSignedUp());
         });
     }
 
