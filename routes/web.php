@@ -4,15 +4,19 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/p/about', function () {
+    return view('pages.static.about');
+});
+
 Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/imprint', function () {
+Route::get('/p/imprint', function () {
     return view('pages.static.imprint');
 });
 
-Route::get('/terms', function () {
+Route::get('/p/terms', function () {
     return view('pages.static.terms');
 });
 
