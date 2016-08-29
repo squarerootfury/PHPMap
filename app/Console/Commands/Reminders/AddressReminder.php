@@ -47,10 +47,10 @@ class AddressReminder extends Command
             foreach ($users as $user) {
                 $user->notify(new RemindAddress());
             }
-        }
 
-        foreach ($admins as $admin) {
-            $admin->notify(new AddressReminderReport($users));
+            foreach ($admins as $admin) {
+                $admin->notify(new AddressReminderReport($users));
+            }
         }
 
         $this->info('Reminder was send to "'. $users->count() . '" users');
