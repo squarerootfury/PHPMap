@@ -8,7 +8,7 @@ return [
          * The name of this application. You can use this name to monitor
          * the backups.
          */
-        'name' => env('APP_URL'),
+        'name' => config('app.name'),
 
         'source' => [
 
@@ -20,6 +20,7 @@ return [
                  */
                 'include' => [
                     base_path(),
+                    storage_path('app/public/avatars'),
                 ],
 
                 /*
@@ -29,7 +30,9 @@ return [
                 'exclude' => [
                     base_path('vendor'),
                     base_path('node_modules'),
-                    storage_path(),
+                    storage_path('framework'),
+                    storage_path('logs'),
+                    storage_path('app/'.config('app.name')),
                 ],
 
                 /*
@@ -140,9 +143,9 @@ return [
          * Telegram requires the installation of the irazasyed/telegram-bot-sdk package.
          */
         'events' => [
-            'whenBackupWasSuccessful'     => ['log'],
-            'whenCleanupWasSuccessful'    => ['log'],
-            'whenHealthyBackupWasFound'   => ['log'],
+            'whenBackupWasSuccessful'     => ['log', 'mail'],
+            'whenCleanupWasSuccessful'    => ['log', 'mail'],
+            'whenHealthyBackupWasFound'   => ['log', 'mail'],
             'whenBackupHasFailed'         => ['log', 'mail'],
             'whenCleanupHasFailed'        => ['log', 'mail'],
             'whenUnhealthyBackupWasFound' => ['log', 'mail'],
