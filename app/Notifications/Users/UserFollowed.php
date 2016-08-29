@@ -48,7 +48,7 @@ class UserFollowed extends Notification implements ShouldQueue
                     ->subject('New Follower!')
                     ->line($this->user->username . ' started following you.')
                     ->action('Show Followers', 'https://phpmap.co/profile/followers')
-                    ->line('Thank you for using our application!');
+                    ->line('Thank you for using PHPMap!');
     }
 
     /**

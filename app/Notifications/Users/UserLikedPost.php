@@ -43,7 +43,7 @@ class UserLikedPost extends Notification
         return (new MailMessage)
                     ->line('The introduction to the notification.')
                     ->action('Notification Action', 'https://laravel.com')
-                    ->line('Thank you for using our application!');
+                    ->line('Thank you for using PHPMap!');
     }
 
     /**
