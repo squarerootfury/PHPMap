@@ -30,21 +30,6 @@ Route::resource('blogs', 'Blog\UserController');
 Route::resource('blogs.articles', 'Blog\ArticleController');
 
 
-Route::get('/test', function () {
-   $users = factory(\App\User::class, 10)->create();
-
-    //return auth()->user()->followers;
-//    return str_random(20).'.'.str_random(5).'_'.str_random(15);
-
-//    $user = \PHPMap\User::findByUsername('fwartner');
-//
-//    $user->update([
-//        'avatar' => 'https://avatars0.githubusercontent.com/u/6692500?v=3&s=460'
-//    ]);
-//
-//    $user->reindex();
-});
-
 Route::get('/profile', 'Profile\ProfileController@index');
 Route::get('/settings', 'Profile\SettingsController@index');
 
