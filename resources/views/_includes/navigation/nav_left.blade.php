@@ -21,3 +21,7 @@
 {{--<li>--}}
     {{--<a href="{{ url('/meetups') }}">Meetups</a>--}}
 {{--</li>--}}
+
+<li>
+    <a href="https://phpmapslack.herokuapp.com/">Slack</a>
+</li>
