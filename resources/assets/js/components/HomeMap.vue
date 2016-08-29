@@ -21,7 +21,7 @@
                 var mapOptions = {
                     zoom: 3,
                     center: new google.maps.LatLng(51.165691, 10.451526),
-
+                    scrollwheel: false
                 };
                 geomap = new google.maps.Map(document.querySelector('#map'), mapOptions);
                 this.createMap(geomap,'initialized');
