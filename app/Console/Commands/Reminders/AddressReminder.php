@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands\Reminders;
 
+use App\Notifications\Admin\AddressReminderReport;
 use App\Notifications\Users\RemindAddress;
 use App\User;
 use Illuminate\Console\Command;
@@ -40,9 +41,16 @@ class AddressReminder extends Command
     public function handle()
     {
         $users = User::where('address', '')->get();
+        $admins = User::where('is_admin', 1)->get();
 
-        foreach ($users as $user) {
-            $user->notify(new RemindAddress());
+        if ($users) {
+            foreach ($users as $user) {
+                $user->notify(new RemindAddress());
+            }
+        }
+
+        foreach ($admins as $admin) {
+            $admin->notify(new AddressReminderReport($users));
         }
 
         $this->info('Reminder was send to "'. $users->count() . '" users');
