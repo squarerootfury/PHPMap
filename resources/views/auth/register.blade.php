@@ -71,7 +71,7 @@
                             <li><i class="fa fa-check green" aria-hidden="true"></i> More will follow..</li>
                         </ul>
 
-                        <h5>Can i contribute?</h5>
+                        <h5>Can I contribute?</h5>
                         <p>Yes. The source of PHPMap is licensed under the MIT-License available on <a href="https://github.com/PHPMap/PHPMap">GitHub</a>.</p>
                     </div>
                 </div>
