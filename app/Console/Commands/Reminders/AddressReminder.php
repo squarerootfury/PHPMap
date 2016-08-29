@@ -39,7 +39,7 @@ class AddressReminder extends Command
      */
     public function handle()
     {
-        $users = User::where('address', null)->get();
+        $users = User::where('address', '')->get();
 
         foreach ($users as $user) {
             $user->notify(new RemindAddress());
