@@ -14,7 +14,7 @@
             container: document.querySelector('#address-input'),
         });
 
-        placesAutocomplete.on('change', e => this.updateLatLng(e));
+        placesAutocomplete.on('change', function(e) { this.updateLatLng(e) } );
         var updateLatLng = function(e) {
             $('<input>').attr({
                 type: 'hidden',
