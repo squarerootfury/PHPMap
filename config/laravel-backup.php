@@ -19,7 +19,7 @@ return [
                  * specify individual files as well.
                  */
                 'include' => [
-                    base_path(),
+//                    base_path(),
                     storage_path('app/public/avatars'),
                 ],
 
