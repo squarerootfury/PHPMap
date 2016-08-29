@@ -82,6 +82,10 @@
                 <div class="col-md-3">
                     <a href="https://pusher.com"><img src="{{ asset('images/sponsors/pusher_logo_dark.png') }}" alt="Pusher Logo" class="img img-responsive"></a>
                 </div>
+
+                <div class="col-md-3">
+                    <a href="https://larajobs.com/?partner=499"><img src="{{ asset('images/sponsors/larajobs.jpg') }}" alt="Larajobs Logo" class="img img-responsive"></a>
+                </div>
             </div>
         </div>
     </div>
