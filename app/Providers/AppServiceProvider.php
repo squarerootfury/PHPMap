@@ -3,16 +3,10 @@
 namespace App\Providers;
 
 use App\Events\Users\UserSignedUp;
-use App\Mail\Users\SocialSignupMail;
 use App\Notifications\Users\SignedUp;
 use App\Notifications\Users\SignedUpSocial;
-use Bugsnag\BugsnagLaravel\Facades\Bugsnag;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\ServiceProvider;
-
-use App\Mail\Users\UserRegisteredMail;
-
 
 use App\User;
 use Psr\Log\LoggerInterface;

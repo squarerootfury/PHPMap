@@ -33,6 +33,6 @@ class UserSignedUp implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('users');
+        return new Channel('users');
     }
 }
