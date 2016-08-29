@@ -14,7 +14,6 @@
             container: document.querySelector('#address-input'),
         });
 
-        placesAutocomplete.on('change', function(e) { this.updateLatLng(e) } );
         var updateLatLng = function(e) {
             $('<input>').attr({
                 type: 'hidden',
@@ -44,6 +43,8 @@
                 value: e.suggestion['country']
             }).appendTo('form');
         }
+        placesAutocomplete.on('change', function(e) { updateLatLng(e) } );
+
     </script>
 @stop
 
