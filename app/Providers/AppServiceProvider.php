@@ -30,12 +30,12 @@ class AppServiceProvider extends ServiceProvider
             if (!$user->github_id === null) {
                 $user->notify(new SignedUp($user));
 
-                event(new UserSignedUp());
+                event(new UserSignedUp($user));
             }
 
             $user->notify(new SignedUpSocial($user));
 
-            event(new UserSignedUp());
+            event(new UserSignedUp($user));
         });
     }
 
