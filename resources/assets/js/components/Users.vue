@@ -63,16 +63,18 @@
                 );
 
                 var itemTemplate = '<div class="col-md-4">'+
-                        '<div class="panel panel-default">'+
+                        '<div class="panel panel-default user-panel">'+
+                        '<a href="/@{{ username }}">'+
                         '<div class="media">'+
                         '<div class="media-left">'+
-                        '<a href="/@{{ username }}"><img style="max-height: 68px;" class="media-object" src="{{ avatar }}" alt="{{ username }}"></a>'+
+                        '<img style="max-height: 68px;" class="media-object" src="{{ avatar }}" alt="{{ username }}">'+
                         '</div>'+
                         '<div class="media-body">'+
                         '<h5 class="media-heading">{{ username }}</h4>'+
                         '<i class="fa fa-map-marker" aria-hidden="true"></i> {{ country }}'+
                         '</div>'+
                         '</div>'+
+                        '</a>'+
                         '</div>'+
                         '</div>';
 

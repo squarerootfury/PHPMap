@@ -25,3 +25,11 @@ body {
 .green {
   color: green;
 }
+
+.user-panel a {
+    color: inherit;
+}
+
+.user-panel a:hover {
+    text-decoration: none;
+}
