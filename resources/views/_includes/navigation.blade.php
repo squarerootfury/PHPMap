@@ -10,7 +10,7 @@
             </button>
 
             <a class="navbar-brand" href="{{ url('/') }}">
-                PHPMap
+                <img class="img img-responsive" style="max-height: 25px;" alt="Logo" src="{{ asset('images/logo_big.png') }}">
             </a>
         </div>
 
