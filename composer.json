@@ -7,7 +7,7 @@
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
-        "pusher/pusher-php-server": "2.5.0-rc4",
+        "pusher/pusher-php-server": "^2.4",
         "pda/pheanstalk": "^3.1",
         "spatie/laravel-permission": "^1.5",
         "guzzlehttp/guzzle": "^6.2",
@@ -19,8 +19,7 @@
         "laravel/socialite": "^2.0",
         "jstayton/google-maps-geocoder": "^2.4",
         "intervention/image": "^2.3",
-        "get-stream/stream-laravel": "^2.2",
-        "laravel-notification-channels/pusher-push-notifications": "^1.0"
+        "get-stream/stream-laravel": "^2.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
