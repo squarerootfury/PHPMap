@@ -59,7 +59,7 @@
                         // Make sure that we don't have two users at the exact same position
                         var position;
                         var randomness = 0.01;
-                        while(true) {
+                        while(true && usr.geo.lat > 0 && usr.geo.lon > 0) {
                             position = usr.geo.lat + "-" + usr.geo.lng;
                             if(positions.indexOf(position) !== -1) {
                                 usr.geo.lat += (Math.random() - 0.5) * randomness;
