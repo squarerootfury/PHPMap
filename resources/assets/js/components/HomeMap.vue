@@ -18,13 +18,24 @@
 
         methods: {
             mapInit() {
+                var properties = this.loadMapProperties();
+
                 var mapOptions = {
-                    zoom: 3,
-                    center: new google.maps.LatLng(51.165691, 10.451526),
+                    zoom: properties.zoom,
+                    center: new google.maps.LatLng(properties.lat, properties.lng),
                     scrollwheel: false
                 };
+
                 geomap = new google.maps.Map(document.querySelector('#map'), mapOptions);
                 this.createMap(geomap,'initialized');
+
+                google.maps.event.addListener(geomap, 'dragend', () => {
+                    this.storeMapProperties();
+                });
+
+                google.maps.event.addListener(geomap, 'zoom_changed', () => {
+                    this.storeMapProperties();
+                });
             },
 
             createMap(map, options) {
@@ -61,6 +72,19 @@
                         });
                     });
                 });
+            },
+
+            loadMapProperties() {
+                var properties = JSON.parse(localStorage.getItem('HomeMap.properties'));
+                return properties ? properties : { lat: 51.165691, lng: 10.451526, zoom: 3 };
+            },
+
+            storeMapProperties() {
+                localStorage.setItem('HomeMap.properties', JSON.stringify({
+                    lat: geomap.getCenter().lat(),
+                    lng: geomap.getCenter().lng(),
+                    zoom: geomap.getZoom()
+                }));
             }
         }
     }
