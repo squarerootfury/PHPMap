@@ -32,6 +32,8 @@
                     this.users = response.json();
 
                     var all = this.users;
+                
+                    var positions = [];
 
                     all.forEach(function (user) {
                         var usr = {
@@ -39,17 +41,31 @@
                             username: user.username,
                             avatar: user.avatar,
                             geo: {
-                                lat: user.lat,
-                                lon: user.lng
+                                lat: parseFloat(user.lat),
+                                lon: parseFloat(user.lng)
                             }
                         };
 
+                        // Make sure that we don't have two users at the exact same position
+                        var position;
+                        var randomness = 0.01;
+                        while(true) {
+                            position = usr.geo.lat + "-" + usr.geo.lng;
+                            if(positions.indexOf(position) !== -1) {
+                                usr.geo.lat += (Math.random() - 0.5) * randomness;
+                                usr.geo.lon += (Math.random() - 0.5) * randomness;
+                            } else {
+                                break;
+                            }
+                        }
+                        positions.push(position);
+                        
                         var html = '<span><img style="max-height: 15px;" class="img img-circle" src="' + usr.avatar + '" alt="">&nbsp;<a href="/@'+ usr.username +'">' + usr.username + '</a></span>';
                         var userLatLng = new google.maps.LatLng(usr.geo.lat, usr.geo.lon);
 
                         var marker = new google.maps.Marker({
                             position: userLatLng,
-                            map: map,
+                            map: map
                         });
 
                         var infowindow = new google.maps.InfoWindow({
