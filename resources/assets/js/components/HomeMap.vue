@@ -13,7 +13,6 @@
 
         ready() {
             this.mapInit();
-            google.maps.event.addDomListener(window, 'load', this.mapInit());
         },
 
         methods: {
