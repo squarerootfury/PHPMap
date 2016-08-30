@@ -13,7 +13,6 @@ return [
     */
 
     'name' => 'PHPMap',
-    'logo' => '',
 
     /*
     |--------------------------------------------------------------------------
@@ -184,7 +183,6 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 //        GetStream\StreamLaravel\StreamLaravelServiceProvider::class,
-
 
     ],
 

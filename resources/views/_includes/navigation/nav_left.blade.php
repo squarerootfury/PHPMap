@@ -3,6 +3,10 @@
 </li>
 
 <li>
+    <a href="{{ url('/p/about') }}">About</a>
+</li>
+
+<li>
     <a href="{{ url('users') }}">Users</a>
 </li>
 
@@ -17,3 +21,7 @@
 {{--<li>--}}
     {{--<a href="{{ url('/meetups') }}">Meetups</a>--}}
 {{--</li>--}}
+
+<li>
+    <a href="https://phpmapslack.herokuapp.com/">Slack</a>
+</li>

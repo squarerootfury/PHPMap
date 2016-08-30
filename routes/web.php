@@ -4,15 +4,19 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/p/about', function () {
+    return view('pages.static.about');
+});
+
 Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/imprint', function () {
+Route::get('/p/imprint', function () {
     return view('pages.static.imprint');
 });
 
-Route::get('/terms', function () {
+Route::get('/p/terms', function () {
     return view('pages.static.terms');
 });
 
@@ -29,21 +33,6 @@ Route::get('@{username}', 'Users\UserController@show');
 Route::resource('blogs', 'Blog\UserController');
 Route::resource('blogs.articles', 'Blog\ArticleController');
 
-
-Route::get('/test', function () {
-   $users = factory(\App\User::class, 10)->create();
-
-    //return auth()->user()->followers;
-//    return str_random(20).'.'.str_random(5).'_'.str_random(15);
-
-//    $user = \PHPMap\User::findByUsername('fwartner');
-//
-//    $user->update([
-//        'avatar' => 'https://avatars0.githubusercontent.com/u/6692500?v=3&s=460'
-//    ]);
-//
-//    $user->reindex();
-});
 
 Route::get('/profile', 'Profile\ProfileController@index');
 Route::get('/settings', 'Profile\SettingsController@index');

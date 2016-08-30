@@ -14,6 +14,6 @@
 
 @section('content')
     <div class="container">
-
+        <h1 class="text-center">Coming soon..</h1>
     </div>
 @stop

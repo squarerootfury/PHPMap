@@ -14,7 +14,6 @@
             container: document.querySelector('#address-input'),
         });
 
-        placesAutocomplete.on('change', e => this.updateLatLng(e));
         var updateLatLng = function(e) {
             $('<input>').attr({
                 type: 'hidden',
@@ -44,6 +43,8 @@
                 value: e.suggestion['country']
             }).appendTo('form');
         }
+        placesAutocomplete.on('change', function(e) { updateLatLng(e) } );
+
     </script>
 @stop
 
@@ -71,7 +72,7 @@
                             <li><i class="fa fa-check green" aria-hidden="true"></i> More will follow..</li>
                         </ul>
 
-                        <h5>Can i contribute?</h5>
+                        <h5>Can I contribute?</h5>
                         <p>Yes. The source of PHPMap is licensed under the MIT-License available on <a href="https://github.com/PHPMap/PHPMap">GitHub</a>.</p>
                     </div>
                 </div>

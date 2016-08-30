@@ -18,6 +18,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = BlogEntry::all();
+
         return response()->json($articles);
     }
 

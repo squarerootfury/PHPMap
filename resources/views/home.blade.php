@@ -65,11 +65,15 @@
         <div class="row">
             <h2 class="text-center">Stats</h2>
 
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <h3 class="text-center">{{ App\User::count() }} Users worldwide</h3>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-4">
+                <h3 class="text-center">{{ App\Models\UserPost::count() }} Statuses updated</h3>
+            </div>
+
+            <div class="col-md-4">
                 <h3 class="text-center">{{ App\Models\BlogEntry::count() }} Articles written</h3>
             </div>
 
@@ -80,35 +84,5 @@
 
         <hr>
 
-        {{--<div class="row">--}}
-            {{--<h2 class="text-center">Latest..</h2>--}}
-
-            {{--<div class="col-md-4">--}}
-                {{--<h4>.. Users</h4>--}}
-                {{--<div class="panel panel-default">--}}
-                    {{--<div class="panel-body">--}}
-
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<div class="col-md-4">--}}
-                {{--<h4>.. Articles</h4>--}}
-                {{--<div class="panel panel-default">--}}
-                    {{--<div class="panel-body">--}}
-
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<div class="col-md-4">--}}
-                {{--<h4>.. Meetups</h4>--}}
-                {{--<div class="panel panel-default">--}}
-                    {{--<div class="panel-body">--}}
-
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
     </div>
 @stop

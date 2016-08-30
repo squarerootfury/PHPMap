@@ -14,7 +14,6 @@
 			container: document.querySelector('#address-input'),
 		});
 
-		placesAutocomplete.on('change', e => this.updateLatLng(e));
 		var updateLatLng = function(e) {
 			$('<input>').attr({
 				type: 'hidden',
@@ -44,6 +43,7 @@
 				value: e.suggestion['country']
 			}).appendTo('form');
 		}
+		placesAutocomplete.on('change', function(e) { updateLatLng(e) } );
 	</script>
 @stop
 
@@ -109,12 +109,12 @@
 					</form>
 				</div>
 
-				<div role="tabpanel" class="tab-pane" id="oauth">
-					<br>
-					<passport-clients></passport-clients>
-					<passport-authorized-clients></passport-authorized-clients>
-					<passport-personal-access-tokens></passport-personal-access-tokens>
-				</div>
+				{{--<div role="tabpanel" class="tab-pane" id="oauth">--}}
+					{{--<br>--}}
+					{{--<passport-clients></passport-clients>--}}
+					{{--<passport-authorized-clients></passport-authorized-clients>--}}
+					{{--<passport-personal-access-tokens></passport-personal-access-tokens>--}}
+				{{--</div>--}}
 			</div>
 		</div>
 	</div>

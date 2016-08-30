@@ -2,26 +2,23 @@
 
 namespace App\Notifications\Users;
 
-use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class SignedUp extends Notification implements ShouldQueue
+class RemindAddress extends Notification implements ShouldQueue
 {
     use Queueable;
-
-    public $user;
 
     /**
      * Create a new notification instance.
      *
-     * @param User $user
+     * @return void
      */
-    public function __construct(User $user)
+    public function __construct()
     {
-        $this->user = $user;
+        //
     }
 
     /**
@@ -44,9 +41,9 @@ class SignedUp extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->subject('Welcome to PHPMap!')
-                    ->line('You have successfully singed up to PHPMap!')
-                    ->action('Visit your Profile', 'https://phpmap.co/@'.$this->user->username)
+                    ->subject('Please add an address')
+                    ->line('You need to provide an address to appear on the map.')
+                    ->action('Set your address', 'https://phpmap.co/settings')
                     ->line('Thank you for using PHPMap!');
     }
 

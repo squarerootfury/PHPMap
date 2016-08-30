@@ -16,6 +16,10 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\Users\NewFollower' => [
             'App\Listeners\Users\NewFollowerListener',
         ],
+
+        'App\Events\Users\UserSignedUp' => [
+            'App\Listeners\Users\UserSignedUpListener',
+        ],
     ];
 
     /**
