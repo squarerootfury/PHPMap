@@ -5,6 +5,8 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <h4>{{ article.title }}</h4>
+                        <p>{{ article.body }}</p>
+                        <a href="/blogs/{{ article.user_id }}/{{ article.slug }}">Read more</a>
                     </div>
                 </div>
             </div>
@@ -20,7 +22,7 @@
 
         data() {
             return {
-                articles: []
+                articles: [],
             }
         },
 

@@ -1,5 +1,7 @@
 # PHPMap Source
 
+[![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](http://stackshare.io/fwartner/phpmap)
+
 PHPMap is an interactive map of PHP-Developers around the world.
 You will be able to organize meetups & usergroups. work on projects together with developers around you or simply have a look, who´s next to you.
 
