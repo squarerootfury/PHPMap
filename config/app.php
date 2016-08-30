@@ -183,7 +183,6 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 //        GetStream\StreamLaravel\StreamLaravelServiceProvider::class,
-        NotificationChannels\PusherPushNotifications\PusherPushNotificationsServiceProvider::class,
 
     ],
 
