@@ -1,4 +1,9 @@
 {
+<<<<<<< HEAD
   "css/app.css": "css/app-420991a90b.css",
   "js/app.js": "js/app-ffb7c18c9d.js"
+=======
+  "css/app.css": "css/app-0970f5132d.css",
+  "js/app.js": "js/app-8989dca485.js"
+>>>>>>> PHPMap/master
 }
