@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "918eea84604f689e8944677563a965e7",
-    "content-hash": "afbd81b878ae8997e44f08c867529401",
+    "hash": "ec1e6ef5cc6c58174b14fdd03cecafaf",
+    "content-hash": "015e00a8a24d7d974e7d859232802f0d",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -757,6 +757,58 @@
             "time": "2016-06-24 23:00:38"
         },
         {
+            "name": "illuminate/notifications",
+            "version": "v5.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/notifications.git",
+                "reference": "df688e46eaa77a4f54d7c21570fd2cf51f0d5091"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/notifications/zipball/df688e46eaa77a4f54d7c21570fd2cf51f0d5091",
+                "reference": "df688e46eaa77a4f54d7c21570fd2cf51f0d5091",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/broadcasting": "5.3.*",
+                "illuminate/bus": "5.3.*",
+                "illuminate/contracts": "5.3.*",
+                "illuminate/support": "5.3.*",
+                "php": ">=5.6.4",
+                "ramsey/uuid": "~3.0"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "Required to use the Slack transport.",
+                "illuminate/database": "Required to use the database transport (5.3.*).",
+                "nexmo/client": "Required to use the Nexmo transport."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Notifications\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "The Illuminate Notifications package.",
+            "homepage": "https://laravel.com",
+            "time": "2016-08-26 17:24:59"
+        },
+        {
             "name": "intervention/image",
             "version": "2.3.7",
             "source": {
@@ -1013,6 +1065,74 @@
                 "maps"
             ],
             "time": "2015-11-10 19:17:52"
+        },
+        {
+            "name": "laravel-notification-channels/pusher-push-notifications",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-notification-channels/pusher-push-notifications.git",
+                "reference": "2ec875b9d7f36e991fdafab0160a9d890f84a79e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-notification-channels/pusher-push-notifications/zipball/2ec875b9d7f36e991fdafab0160a9d890f84a79e",
+                "reference": "2ec875b9d7f36e991fdafab0160a9d890f84a79e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/events": "5.3.*",
+                "illuminate/notifications": "5.3.*",
+                "illuminate/queue": "5.3.*",
+                "illuminate/support": "5.3.*",
+                "php": ">=5.6.4",
+                "pusher/pusher-php-server": "2.5.0-rc4"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NotificationChannels\\PusherPushNotifications\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be"
+                },
+                {
+                    "name": "Marcel Pociot",
+                    "email": "hello@marcelpociot.com",
+                    "homepage": "http://marcelpociot.com"
+                },
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://sebastiandedeyne.com"
+                },
+                {
+                    "name": "Mohamed Said",
+                    "email": "themsaid@gmail.com",
+                    "homepage": "https://themsaid.com"
+                }
+            ],
+            "description": "Pusher native Push Notifications driver.",
+            "homepage": "https://github.com/LaravelNotificationChannels/pusher-push-notifications",
+            "keywords": [
+                "laravel",
+                "notifications",
+                "pusher",
+                "pusher-push-notifications"
+            ],
+            "time": "2016-08-25 12:03:22"
         },
         {
             "name": "laravel/framework",
@@ -2129,16 +2249,16 @@
         },
         {
             "name": "pusher/pusher-php-server",
-            "version": "v2.6.0",
+            "version": "v2.5.0-rc4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pusher/pusher-http-php.git",
-                "reference": "cdc11530c6f97eab76850d8ead6c513eeeccc37a"
+                "reference": "65c59fdb741a36b9e70a30e51778f2a4f64b2736"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pusher/pusher-http-php/zipball/cdc11530c6f97eab76850d8ead6c513eeeccc37a",
-                "reference": "cdc11530c6f97eab76850d8ead6c513eeeccc37a",
+                "url": "https://api.github.com/repos/pusher/pusher-http-php/zipball/65c59fdb741a36b9e70a30e51778f2a4f64b2736",
+                "reference": "65c59fdb741a36b9e70a30e51778f2a4f64b2736",
                 "shasum": ""
             },
             "require": {
@@ -2169,7 +2289,7 @@
                 "rest",
                 "trigger"
             ],
-            "time": "2016-08-23 09:07:29"
+            "time": "2016-08-02 14:48:33"
         },
         {
             "name": "ramsey/uuid",
@@ -5016,7 +5136,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "pusher/pusher-php-server": 5
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
