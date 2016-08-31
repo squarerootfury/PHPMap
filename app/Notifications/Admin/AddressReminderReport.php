@@ -44,7 +44,7 @@ class AddressReminderReport extends Notification implements ShouldQueue
     {
         return (new MailMessage)
                     ->subject('Address-Reminder sent!')
-                    ->line('The latest "Address-Reminder" was sent to '. $this->users->count() .' users')
+                    ->line('The latest "Address-Reminder" was sent to '.$this->users->count().' users')
                     ->action('Show Backend', 'https://phpmap.co/backend')
                     ->line('Thank you for using PHPMap');
     }

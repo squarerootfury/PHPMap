@@ -15,7 +15,7 @@ class Administrator
      */
     public function handle($request, Closure $next)
     {
-        if (!$request->user()->is_admin) {
+        if (! $request->user()->is_admin) {
             return redirect('/');
         }
 

@@ -7,7 +7,6 @@ use App\Notifications\Users\SignedUp;
 use App\Notifications\Users\SignedUpSocial;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;
-
 use App\User;
 use Psr\Log\LoggerInterface;
 
@@ -21,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         User::created(function ($user) {
-            if (!$user->github_id === null) {
+            if (! $user->github_id === null) {
                 $user->notify(new SignedUp($user));
 
                 event(new UserSignedUp($user));

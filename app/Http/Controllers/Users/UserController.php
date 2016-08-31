@@ -3,10 +3,7 @@
 namespace App\Http\Controllers\Users;
 
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\UserPost;
 use App\User;
 
 class UserController extends Controller
@@ -58,7 +55,7 @@ class UserController extends Controller
             $users = User::all();
         }
 
-        if (!$user) {
+        if (! $user) {
             abort(404);
         }
 

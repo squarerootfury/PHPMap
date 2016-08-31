@@ -44,12 +44,12 @@ class SignedUpSocial extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         $password = $this->createPassword();
-        
+
         return (new MailMessage)
                     ->subject('Welcome to PHPMap!')
                     ->line('You have successfully singed up to PHPMap!')
                     ->action('Visit your Profile', 'https://phpmap.co/@'.$this->user->username)
-                    ->line('Your temporary password is "'. $password .'"');
+                    ->line('Your temporary password is "'.$password.'"');
     }
 
     /**
@@ -70,7 +70,7 @@ class SignedUpSocial extends Notification implements ShouldQueue
         $password = str_random(10);
 
         $this->user->update([
-           'password' => bcrypt($password)
+           'password' => bcrypt($password),
         ]);
 
         return $password;

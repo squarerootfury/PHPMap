@@ -24,7 +24,7 @@ class CreatePostRequest extends FormRequest
     public function rules()
     {
         return [
-            'body' => 'required|min:3'
+            'body' => 'required|min:3',
         ];
     }
 }

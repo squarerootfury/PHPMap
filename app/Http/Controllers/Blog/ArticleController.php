@@ -3,11 +3,7 @@
 namespace App\Http\Controllers\Blog;
 
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
-use App\User;
 use App\Models\BlogEntry;
 
 class ArticleController extends Controller
@@ -19,7 +15,6 @@ class ArticleController extends Controller
      */
     public function index()
     {
-
     }
 
     /**
@@ -51,7 +46,6 @@ class ArticleController extends Controller
      */
     public function show($username, $slug)
     {
-
         $entry = BlogEntry::findBySlug($slug);
 
         return $entry->title;

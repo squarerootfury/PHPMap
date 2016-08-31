@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Meetups;
 
 use App\Models\Meetup;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class MeetupController extends Controller
@@ -18,6 +16,7 @@ class MeetupController extends Controller
     public function index()
     {
         $meetups = Meetup::where('published', true)->get();
+
         return view('meetups.index', compact('meetups'));
     }
 
@@ -28,7 +27,7 @@ class MeetupController extends Controller
      */
     public function create()
     {
-        if (!auth()->check()) {
+        if (! auth()->check()) {
             return redirect('/login');
         }
 

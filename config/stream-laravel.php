@@ -49,8 +49,8 @@ return [
     |-----------------------------------------------------------------------------
     |
     */
-    'news_feeds' => array(
+    'news_feeds' => [
         'flat' => 'flat',
         'aggregated' => 'aggregated',
-    )
+    ],
 ];

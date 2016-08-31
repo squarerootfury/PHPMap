@@ -4,9 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Exception;
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -45,7 +42,7 @@ class SocialController extends Controller
     }
 
     /**
-     * Return user if exists; create and return if doesn't
+     * Return user if exists; create and return if doesn't.
      *
      * @param $githubUser
      * @return User

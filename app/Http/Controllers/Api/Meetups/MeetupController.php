@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Api\Meetups;
 
 use App\Models\Meetup;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class MeetupController extends Controller
@@ -18,6 +16,7 @@ class MeetupController extends Controller
     public function index()
     {
         $meetups = Meetup::where('published', true)->get();
+
         return response()->json($meetups);
     }
 
@@ -65,6 +64,7 @@ class MeetupController extends Controller
     public function show($id)
     {
         $meetup = Meetup::find($id);
+
         return response()->json($meetup);
     }
 
@@ -90,6 +90,7 @@ class MeetupController extends Controller
     {
         $meetup = Meetup::find($id);
         $meetup->update($request);
+
         return back();
     }
 
@@ -103,6 +104,7 @@ class MeetupController extends Controller
     {
         $meetup = Meetup::find($id);
         $meetup->delete();
+
         return back();
     }
 }

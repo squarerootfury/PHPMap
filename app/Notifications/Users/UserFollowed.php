@@ -46,7 +46,7 @@ class UserFollowed extends Notification implements ShouldQueue
     {
         return (new MailMessage)
                     ->subject('New Follower!')
-                    ->line($this->user->username . ' started following you.')
+                    ->line($this->user->username.' started following you.')
                     ->action('Show Followers', 'https://phpmap.co/profile/followers')
                     ->line('Thank you for using PHPMap!');
     }
@@ -60,7 +60,7 @@ class UserFollowed extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            'username' => $this->user->username
+            'username' => $this->user->username,
         ];
     }
 }

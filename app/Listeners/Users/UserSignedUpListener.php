@@ -3,8 +3,6 @@
 namespace App\Listeners\Users;
 
 use App\Events\Users\UserSignedUp;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
 class UserSignedUpListener
 {

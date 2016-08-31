@@ -53,6 +53,6 @@ class AddressReminder extends Command
             }
         }
 
-        $this->info('Reminder was sent to "'. $users->count() . '" users');
+        $this->info('Reminder was sent to "'.$users->count().'" users');
     }
 }

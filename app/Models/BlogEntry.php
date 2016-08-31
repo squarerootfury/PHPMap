@@ -11,12 +11,12 @@ class BlogEntry extends Model
     use Searchable;
 
     protected $fillable = [
-        'title', 'slug', 'user_id', 'excerpt', 'body'
+        'title', 'slug', 'user_id', 'excerpt', 'body',
     ];
 
     public static function findBySlug($slug)
     {
-    	return self::where('slug', $slug)->first();
+        return self::where('slug', $slug)->first();
     }
 
     public function author()

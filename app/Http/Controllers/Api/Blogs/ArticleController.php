@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Api\Blogs;
 
 use App\Models\BlogEntry;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller
@@ -18,6 +16,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = BlogEntry::all();
+
         return response()->json($articles);
     }
 
@@ -58,6 +57,7 @@ class ArticleController extends Controller
     public function show($id)
     {
         $article = BlogEntry::find($id);
+
         return response()->json($article);
     }
 
@@ -83,6 +83,7 @@ class ArticleController extends Controller
     {
         $article = BlogEntry::find($id);
         $article->update($request->all());
+
         return response()->json($article);
     }
 
