@@ -39,10 +39,20 @@
     <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_KEY') }}"></script>
     <script src="{{ elixir('js/app.js') }}"></script>
     @yield('scripts')
-    <script src="https://cdn.smooch.io/smooch.min.js"></script>
-    <script>
-        Smooch.init({ appToken: 'ao84wt37gf0zkgj8j6yxx88ke' });
-    </script>
 
+    <script src="https://cdn.smooch.io/smooch.min.js"></script>
+    @if(auth()->check())
+        <script>
+            Smooch.init({
+                appToken: 'ao84wt37gf0zkgj8j6yxx88ke',
+                givenName: '{!! auth()->user()->name !!}',
+                email: '{!! auth()->user()->email !!}'
+            });
+        </script>
+    @else
+        <script>
+            Smooch.init({ appToken: 'ao84wt37gf0zkgj8j6yxx88ke' });
+        </script>
+    @endif
 </body>
 </html>
