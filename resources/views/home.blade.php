@@ -62,9 +62,9 @@
 
         <hr>
         
-        <h2 class="text-center">Live from the community</h2>
+        <h2 class="text-center">Posts from all around the world</h2>
         <latest-posts></latest-posts>
-        
+        <div class="text-center"><a class="btn btn-primary btn-lg" href="/profile" role="button">Create a post</a></div>
         <hr>
 
         <div class="row">

@@ -1,13 +1,11 @@
 <template>
     <div class="post-list row">
         <div class="col-md-6 col-sm-12" v-for="post in posts">
-            <a href="/@{{ post.author.username }}">
-                <div class="post panel panel--with-avatar panel-default">
-                    <div class="post-avatar"><img alt="" v-bind:src="post.author.avatar" alt="{{ post.author.username }}"></div>
-                    <div class="panel-heading">{{ post.author.username }}</div>
-                    <div class="panel-body">
-                        {{ post.body }}
-                    </div>
+            <a href="/@{{ post.author.username }}" class="post panel panel--with-avatar panel-default">
+                <div class="post-avatar"><img alt="" v-bind:src="post.author.avatar" alt="{{ post.author.username }}"></div>
+                <div class="panel-heading"><strong>{{ post.author.username }}</strong></div>
+                <div class="panel-body">
+                    {{ post.body }}
                 </div>
             </a>
         </div>
@@ -51,18 +49,28 @@
     }
 
     .post {
-        margin-right: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
         margin-top: 30px;
         position: relative;
         transition: box-shadow 0.15s ease-in;
+        display: block;
+        color: #666666;
     }
     
-    a .post, a:hover .post {
+    a:hover, a:focus {
         text-decoration: none;
         color: #666666;
     }
 
-    .post:hover {
+    .post:hover, .post:focus {
         box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    @media screen and (max-width: 991px) {
+        .post {
+            margin-right: 0;
+            margin-left: 40px;
+        }
     }
 </style>
