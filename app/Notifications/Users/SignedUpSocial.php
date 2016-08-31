@@ -67,7 +67,7 @@ class SignedUpSocial extends Notification implements ShouldQueue
 
     public function createPassword()
     {
-        $password = str_random(8);
+        $password = str_random(10);
 
         $this->user->update([
            'password' => bcrypt($password)

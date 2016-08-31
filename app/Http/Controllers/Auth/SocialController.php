@@ -63,7 +63,6 @@ class SocialController extends Controller
             'github_id' => $githubUser->id,
             'github_url' => 'https://github.com/'.$githubUser->nickname,
             'avatar' => $githubUser->avatar,
-            'password' => bcrypt('PHPMap_'.$githubUser->nickname.'_TEMP')
         ]);
     }
 }
