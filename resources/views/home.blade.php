@@ -61,6 +61,11 @@
         </div>
 
         <hr>
+        
+        <h2 class="text-center">Live from the community</h2>
+        <latest-posts></latest-posts>
+        
+        <hr>
 
         <div class="row">
             <h2 class="text-center">Stats</h2>
