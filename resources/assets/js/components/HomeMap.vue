@@ -42,6 +42,7 @@
                     this.users = response.json();
 
                     var all = this.users;
+                    var positions = [];
 
                     all.forEach(function (user) {
                         var usr = {
@@ -49,8 +50,8 @@
                             username: user.username,
                             avatar: user.avatar,
                             geo: {
-                                lat: user.lat,
-                                lon: user.lng
+                                lat: parseFloat(user.lat),
+                                lon: parseFloat(user.lng)
                             }
                         };
 
@@ -73,7 +74,7 @@
 
                         var marker = new google.maps.Marker({
                             position: userLatLng,
-                            map: map,
+                            map: map
                         });
 
                         var infowindow = new google.maps.InfoWindow({
