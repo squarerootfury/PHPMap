@@ -13,7 +13,7 @@ See this repository as a way to improve your own experience with PHPMap.
 
 ## Contributing
 
-Thank you for considering contributing to PHPMap! The contribution guide will come very soon..
+Thank you for considering contributing to PHPMap! Checkout the `CONTRIBUTING.md` file in the repo for more information.
 
 ## Security Vulnerabilities
 
