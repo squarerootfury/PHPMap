@@ -41,7 +41,14 @@
         top: -22px;
         border-radius: 100px;
         overflow: hidden;
-        border: 3px solid #7BD1F1;
+        border: 3px solid #4CAF50;
+        width: 80px;
+        height: 80px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .post-avatar img {
+        max-width: 100%;
     }
 
     .panel.panel--with-avatar .panel-heading, .panel.panel--with-avatar .panel-body {
