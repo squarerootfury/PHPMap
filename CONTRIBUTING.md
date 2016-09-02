@@ -21,6 +21,7 @@ We accept contributions via Pull Requests on [Github](https://github.com/PHPMap/
 
 - **Send coherent history** - Make sure each individual commit in your pull request is meaningful. If you had to make multiple intermediate commits while developing, please [squash them](http://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Changing-Multiple-Commit-Messages) before submitting.
 
+- **Compile your assets** - Assure that when you've changed something in the `resources/assets/` directory, you compile the assets in a separate commit on the pull request.
 
 ## Running Tests
 
