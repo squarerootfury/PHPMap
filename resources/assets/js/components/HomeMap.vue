@@ -67,6 +67,7 @@
                                 break;
                             }
                         }
+
                         positions.push(position);
                         
                         var html = '<span><img style="max-height: 15px;" class="img img-circle" src="' + usr.avatar + '" alt="">&nbsp;<a href="/@'+ usr.username +'">' + usr.username + '</a></span>';
