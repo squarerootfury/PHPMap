@@ -67,7 +67,7 @@ class MeetupController extends Controller
         $result = $this->client->request('GET', 'https://php.ug/api/rest/usergroup/'.$id);
 
 
-        return $result;
+        return response()->json($result);
     }
 
     /**

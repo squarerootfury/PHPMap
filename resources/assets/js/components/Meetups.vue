@@ -30,7 +30,7 @@
         methods: {
             getMeetups() {
                 this.$http.get('/public/meetups').then(response => {
-                    this.meetups = response.data;
+                    this.meetups = response.json();
                 });
             }
         }
