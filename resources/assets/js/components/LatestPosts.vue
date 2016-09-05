@@ -4,9 +4,7 @@
             <a href="/@{{ post.author.username }}" class="post panel panel--with-avatar panel-default">
                 <div class="post-avatar"><img class="img img-responsive" v-bind:src="post.author.avatar" alt="{{ post.author.username }}"></div>
                 <div class="panel-heading"><strong>{{ post.author.username }}</strong></div>
-                <div class="panel-body">
-                    {{ post.body }}
-                </div>
+                <div class="panel-body" v-html="post.body | marked"></div>
             </a>
         </div>
     </div>
@@ -22,6 +20,10 @@
 
         ready() {
             this.loadPosts();
+        },
+
+        filters: {
+            marked: marked,
         },
 
         methods: {
