@@ -1,8 +1,8 @@
 <template>
     <div class="row">
-        {{ meetups | json }}
         <div class="col-md-6 col-sm-12" v-for="meetup in meetups">
-
+            {{ meetup.name }} <br>
+            {{ meetup.url }}
         </div>
     </div>
 </template>
