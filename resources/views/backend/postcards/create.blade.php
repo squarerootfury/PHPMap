@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.backend')
 
 @section('page_title')
     Create Postcard
