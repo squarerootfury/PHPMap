@@ -18,9 +18,13 @@
         "bugsnag/bugsnag-laravel": "^2.3",
         "laravel/socialite": "^2.0",
         "jstayton/google-maps-geocoder": "^2.4",
+<<<<<<< HEAD
+        "intervention/image": "^2.3"
+=======
         "intervention/image": "^2.3",
         "get-stream/stream-laravel": "^2.2",
         "aws/aws-sdk-php": "^3.19"
+>>>>>>> master
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

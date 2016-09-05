@@ -61,6 +61,10 @@
         </div>
 
         <hr>
+        
+        <h2 class="text-center">Posts from all around the world</h2>
+            <latest-posts></latest-posts>
+        <hr>
 
         <div class="row">
             <h2 class="text-center">Stats</h2>

@@ -182,7 +182,6 @@ return [
         Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-//        GetStream\StreamLaravel\StreamLaravelServiceProvider::class,
 
     ],
 
@@ -236,7 +235,6 @@ return [
         'Bugsnag' => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Image' => Intervention\Image\Facades\Image::class,
-//        'FeedManager' => GetStream\StreamLaravel\Facades\FeedManager::class,
 
     ],
 

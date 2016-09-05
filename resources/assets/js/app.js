@@ -16,6 +16,7 @@ require('./extra/bootstrap_extra');
  * the application, or feel free to tweak this setup for your needs.
  */
 Vue.component('homemap', require('./components/HomeMap.vue'));
+Vue.component('latest-posts', require('./components/LatestPosts.vue'));
 Vue.component('users', require('./components/Users.vue'));
 Vue.component('singleuser', require('./components/SingleUser.vue'));
 Vue.component('myprofile', require('./components/MyProfile.vue'));
