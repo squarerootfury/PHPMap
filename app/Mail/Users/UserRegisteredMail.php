@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mail\Users;
+namespace app\Mail\Users;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
@@ -10,7 +10,6 @@ use App\User;
 class UserRegisteredMail extends Mailable
 {
     use Queueable, SerializesModels;
-
 
     public $user;
 

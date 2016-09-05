@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Listeners\Users;
+namespace app\Listeners\Users;
 
 use App\Events\Users\NewFollower;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -10,19 +10,15 @@ class NewFollowerListener implements ShouldQueue
 {
     /**
      * Create the event listener.
-     *
-     * @return void
      */
     public function __construct()
     {
-        //
     }
 
     /**
      * Handle the event.
      *
-     * @param  NewFollower  $event
-     * @return void
+     * @param NewFollower $event
      */
     public function handle(NewFollower $event)
     {

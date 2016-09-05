@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace app;
 
 use App\Models\Meetup;
 use App\Models\Notification;

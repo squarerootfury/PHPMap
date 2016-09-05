@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace app\Http\Controllers\Auth;
 
 use App\User;
 use Exception;
@@ -45,6 +45,7 @@ class SocialController extends Controller
      * Return user if exists; create and return if doesn't.
      *
      * @param $githubUser
+     *
      * @return User
      */
     private function findOrCreateUser($githubUser)

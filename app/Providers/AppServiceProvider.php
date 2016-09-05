@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace app\Providers;
 
 use App\Events\Users\UserSignedUp;
 use App\Notifications\Users\SignedUp;
@@ -14,13 +14,11 @@ class AppServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
     public function boot()
     {
         User::created(function ($user) {
-            if (! $user->github_id === null) {
+            if (!$user->github_id === null) {
                 $user->notify(new SignedUp($user));
 
                 event(new UserSignedUp($user));
@@ -34,8 +32,6 @@ class AppServiceProvider extends ServiceProvider
 
     /**
      * Register any application services.
-     *
-     * @return void
      */
     public function register()
     {

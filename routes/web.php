@@ -37,7 +37,6 @@ Route::get('@{username}', 'Users\UserController@show');
 Route::resource('blogs', 'Blog\UserController');
 Route::resource('blogs.articles', 'Blog\ArticleController');
 
-
 Route::get('/profile', 'Profile\ProfileController@index');
 Route::get('/settings', 'Profile\SettingsController@index');
 

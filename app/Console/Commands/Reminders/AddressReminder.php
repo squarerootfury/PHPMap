@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\Reminders;
+namespace app\Console\Commands\Reminders;
 
 use App\Notifications\Admin\AddressReminderReport;
 use App\Notifications\Users\RemindAddress;
@@ -25,8 +25,6 @@ class AddressReminder extends Command
 
     /**
      * Create a new command instance.
-     *
-     * @return void
      */
     public function __construct()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Notifications\Users;
+namespace app\Notifications\Users;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
@@ -12,18 +12,16 @@ class UserLikedPost extends Notification
 
     /**
      * Create a new notification instance.
-     *
-     * @return void
      */
     public function __construct()
     {
-        //
     }
 
     /**
      * Get the notification's delivery channels.
      *
-     * @param  mixed  $notifiable
+     * @param mixed $notifiable
+     *
      * @return array
      */
     public function via($notifiable)
@@ -34,12 +32,13 @@ class UserLikedPost extends Notification
     /**
      * Get the mail representation of the notification.
      *
-     * @param  mixed  $notifiable
+     * @param mixed $notifiable
+     *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)
+        return (new MailMessage())
                     ->line('The introduction to the notification.')
                     ->action('Notification Action', 'https://laravel.com')
                     ->line('Thank you for using PHPMap!');
@@ -48,13 +47,14 @@ class UserLikedPost extends Notification
     /**
      * Get the array representation of the notification.
      *
-     * @param  mixed  $notifiable
+     * @param mixed $notifiable
+     *
      * @return array
      */
     public function toArray($notifiable)
     {
         return [
-            //
+
         ];
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ApiPublic;
+namespace app\Http\Controllers\ApiPublic;
 
 use App\User;
 use App\Http\Controllers\Controller;
@@ -9,6 +9,7 @@ class PostController extends Controller
 {
     /**
      * @param $id
+     *
      * @return \Illuminate\Http\JsonResponse
      */
     public function show($id)

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Postcards;
+namespace app\Http\Requests\Postcards;
 
 use Illuminate\Foundation\Http\FormRequest;
 

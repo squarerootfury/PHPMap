@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events\Users;
+namespace app\Events\Users;
 
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
