@@ -8,15 +8,13 @@ class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->nullable();
-            $table->string('username')->unique();;
+            $table->string('username')->unique();
             $table->string('avatar')->default('/images/profile_image.png');
             $table->string('profile_cover')->default('/images/profile_cover.jpg');
             $table->string('email')->unique();
@@ -50,8 +48,6 @@ class CreateUsersTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {

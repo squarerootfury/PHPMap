@@ -37,23 +37,23 @@
                             </li>
 
                             <li v-if="singleuser.website">
-                                <i class="fa fa-link" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.website }}">Website</a>
+                                <i class="fa fa-link" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.website }}" target="_blank">Website</a>
                             </li>
 
                             <li v-if="singleuser.github_url">
-                                <i class="fa fa-github" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.github_url }}">GitHub</a>
+                                <i class="fa fa-github" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.github_url }}" target="_blank">GitHub</a>
                             </li>
 
                             <li v-if="singleuser.twitter_url">
-                                <i class="fa fa-twitter" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.twitter_url }}">Twitter</a>
+                                <i class="fa fa-twitter" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.twitter_url }}" target="_blank">Twitter</a>
                             </li>
 
                             <li v-if="singleuser.facebook_url">
-                                <i class="fa fa-facebook" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.facebook_url }}">Facebook</a>
+                                <i class="fa fa-facebook" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.facebook_url }}" target="_blank">Facebook</a>
                             </li>
 
                             <li v-if="singleuser.linkedin_url">
-                                <i class="fa fa-linkedin" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.linkedin_url }}">LinkedIn</a>
+                                <i class="fa fa-linkedin" aria-hidden="true"></i> &nbsp; <a href="{{ singleuser.linkedin_url }}" target="_blank">LinkedIn</a>
                             </li>
                         </ul>
                     </div>

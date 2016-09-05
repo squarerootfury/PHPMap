@@ -8,7 +8,7 @@ use App\User;
 class UserPost extends Model
 {
     protected $fillable = [
-        'user_id', 'body'
+        'user_id', 'body',
     ];
 
     public function author()

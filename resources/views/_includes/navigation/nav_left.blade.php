@@ -25,3 +25,7 @@
 <li>
     <a href="https://phpmapslack.herokuapp.com/">Slack</a>
 </li>
+
+{{--<li>--}}
+    {{--<a href="{{ url('/p/postcards') }}">Postcards</a>--}}
+{{--</li>--}}

@@ -1,24 +1,21 @@
 <?php
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-
 use App\User;
 use App\Models\BlogEntry;
 
 class BlogTest extends TestCase
 {
-	use DatabaseMigrations;
+    use DatabaseMigrations;
 
     public function test_user_can_create_blog_entries()
     {
         $user = factory(User::class)->create(['username' => 'johndoe']);
 
         $blogEntry = factory(BlogEntry::class)->make([
-        	'title' => 'Test Entry',
+            'title' => 'Test Entry',
             'slug' => 'test_entry',
-        	'body' => 'Lorem Ipsum Dolor Sit Amet..'
+            'body' => 'Lorem Ipsum Dolor Sit Amet..',
         ]);
 
         $user->blog_entries()->save($blogEntry);
@@ -34,7 +31,7 @@ class BlogTest extends TestCase
         $blogEntry = factory(BlogEntry::class)->make([
             'title' => 'Test Entry',
             'slug' => 'test_entry',
-            'body' => 'Lorem Ipsum Dolor Sit Amet..'
+            'body' => 'Lorem Ipsum Dolor Sit Amet..',
         ]);
 
         $user->blog_entries()->save($blogEntry);

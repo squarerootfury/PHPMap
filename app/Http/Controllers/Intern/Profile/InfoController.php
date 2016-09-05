@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Intern\Profile;
 
 use App\User;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class InfoController extends Controller
@@ -14,7 +12,7 @@ class InfoController extends Controller
     {
         $user = User::find(auth()->user()->id);
         $user->update([
-            'intro' => $request->get('intro')
+            'intro' => $request->get('intro'),
         ]);
 
         $user->save();

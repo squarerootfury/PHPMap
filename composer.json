@@ -19,7 +19,8 @@
         "laravel/socialite": "^2.0",
         "jstayton/google-maps-geocoder": "^2.4",
         "intervention/image": "^2.3",
-        "get-stream/stream-laravel": "^2.2"
+        "get-stream/stream-laravel": "^2.2",
+        "aws/aws-sdk-php": "^3.19"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

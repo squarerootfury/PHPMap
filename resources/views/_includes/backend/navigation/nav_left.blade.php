@@ -11,7 +11,7 @@
 </li>
 
 <li>
-    <a href="https://jobs.phpmap.co">Jobs</a>
+    <a href="{{ route('postcards.index') }}">Postcards</a>
 </li>
 
 <li>
