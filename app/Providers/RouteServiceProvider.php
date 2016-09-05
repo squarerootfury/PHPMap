@@ -34,6 +34,8 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoutes();
 
         $this->mapPublicRoutes();
+
+        $this->mapMobileRoutes();
     }
 
     /**
@@ -80,6 +82,22 @@ class RouteServiceProvider extends ServiceProvider
             'prefix' => 'public',
         ], function ($router) {
             require base_path('routes/public.php');
+        });
+    }
+
+    /**
+     * Define the "mobile" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     */
+    protected function mapMobileRoutes()
+    {
+        Route::group([
+            'middleware' => 'web',
+            'namespace' => $this->namespace,
+            'prefix' => 'mobile',
+        ], function ($router) {
+            require base_path('routes/api_mobile.php');
         });
     }
 }
