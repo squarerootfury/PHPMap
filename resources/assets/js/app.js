@@ -25,6 +25,7 @@ Vue.component('profilesettings', require('./components/ProfileSettings.vue'));
 Vue.component('accountsettings', require('./components/AccountSettings.vue'));
 Vue.component('articles', require('./components/Articles.vue'));
 Vue.component('postcards', require('./components/Postcards.vue'));
+Vue.component('meetups', require('./components/Meetups.vue'));
 
 // Passport Components
 Vue.component('passport-clients', require('./components/passport/Clients.vue'));

@@ -18,10 +18,6 @@
 
 @section('content')
     <div class="container">
-        <ul>
-            @foreach($meetups as $meetup)
-                <li>{{ $meetup->title }}</li>
-            @endforeach
-        </ul>
+        <meetups></meetups>
     </div>
 @stop
