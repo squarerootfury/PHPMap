@@ -4,6 +4,7 @@
 
 <script>
     var geomap;
+    var MarkerClusterer = require('marker-clusterer-plus');
     export default {
         data() {
             return {
@@ -43,6 +44,7 @@
 
                     var all = this.users;
                     var positions = [];
+                    var markers = [];
 
                     all.forEach(function (user) {
                         var usr = {
@@ -74,9 +76,10 @@
                         var userLatLng = new google.maps.LatLng(usr.geo.lat, usr.geo.lon);
 
                         var marker = new google.maps.Marker({
-                            position: userLatLng,
-                            map: map
+                            position: userLatLng
                         });
+                        
+                        markers.push(marker);
 
                         var infowindow = new google.maps.InfoWindow({
                             content: html
@@ -86,6 +89,12 @@
                             infowindow.open(map, marker);
                         });
                     });
+
+                    var clustererOptions = {
+                        imagePath: '/images/map/m'
+                    };
+    
+                    new MarkerClusterer(map, markers, clustererOptions);
                 });
             },
 
@@ -112,5 +121,14 @@
         position: relative;
         left: 0;
         top: -22px;
+    }
+
+    #map .cluster {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Chrome/Safari/Opera */
+        -khtml-user-select: none; /* Konqueror */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
     }
 </style>
