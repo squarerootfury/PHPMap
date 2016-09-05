@@ -15,7 +15,10 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $posts = User::find($id)->posts()->orderBy('created_at', 'desc')->get();
+        $posts = User::find($id)
+            ->posts()
+            ->orderBy('created_at', 'desc')
+            ->get();
 
         return response()->json($posts);
     }
@@ -24,6 +27,9 @@ class PostController extends Controller
      * Returns the latest posts
      */
     public function latest() {
-        return response()->json(UserPost::with('author')->orderBy('created_at', 'desc')->take(10)->get());
+        return response()->json(UserPost::with('author')
+            ->orderBy('created_at', 'desc')
+            ->take(6)
+            ->get());
     }
 }
