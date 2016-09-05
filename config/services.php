@@ -34,4 +34,12 @@ return [
         'client_secret' => env('GITHUB_APP_SECRET'),
         'redirect' => env('GITHUB_APP_CALLBACK'),
     ],
+
+    'firebase' => [
+        'api_key' => env('FIREBASE_KEY'),
+        'auth_domain' => 'AUTH_DOMAIN',
+        'database_url' => env('FIREBASE_URL'),
+        'secret' => env('FIREBASE_SECRET'),
+        'storage_bucket' => 'STORAGE_BUCKET',
+    ]
 ];

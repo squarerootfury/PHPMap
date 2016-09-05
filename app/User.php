@@ -11,10 +11,11 @@ use App\Models\BlogEntry;
 use App\Models\UserPost;
 use Laravel\Scout\Searchable;
 use Spatie\Permission\Traits\HasRoles;
+use Mpociot\Firebase\SyncsWithFirebase;
 
 class User extends Authenticatable
 {
-    use Notifiable, HasRoles, HasApiTokens, Searchable;
+    use Notifiable, HasRoles, HasApiTokens, Searchable, SyncsWithFirebase;
 
     /**
      * The attributes that are mass assignable.
