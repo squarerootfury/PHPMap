@@ -5,8 +5,21 @@ namespace App\Http\Controllers\ApiPublic;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use GuzzleHttp\Client;
+
 class MeetupController extends Controller
 {
+    public $client;
+
+    /**
+     * MeetupController constructor.
+     * @param Client $client
+     */
+    public function __construct(Client $client)
+    {
+        $this->client = $client;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,6 +27,10 @@ class MeetupController extends Controller
      */
     public function index()
     {
+        $result = $this->client->request('GET', 'https://php.ug/api/rest/listtype/1');
+
+
+        return $result;
     }
 
     /**
@@ -23,6 +40,7 @@ class MeetupController extends Controller
      */
     public function create()
     {
+
     }
 
     /**
@@ -34,6 +52,7 @@ class MeetupController extends Controller
      */
     public function store(Request $request)
     {
+        
     }
 
     /**

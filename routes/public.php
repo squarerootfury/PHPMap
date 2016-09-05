@@ -7,7 +7,7 @@ Route::get('posts/latest', 'ApiPublic\PostController@latest');
 
 Route::get('users/getArticles/{id}', 'ApiPublic\UserArticleController@show');
 
-Route::resource('meetups', 'ApiPublic\MeetupController@index');
+Route::resource('meetups', 'ApiPublic\MeetupController');
 Route::resource('articles', 'ApiPublic\ArticleController');
 
 Route::get('postcards', 'ApiPublic\PostcardController@index');
