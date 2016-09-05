@@ -14,13 +14,11 @@ class AppServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
     public function boot()
     {
         User::created(function ($user) {
-            if (! $user->github_id === null) {
+            if (!$user->github_id === null) {
                 $user->notify(new SignedUp($user));
 
                 event(new UserSignedUp($user));
@@ -34,8 +32,6 @@ class AppServiceProvider extends ServiceProvider
 
     /**
      * Register any application services.
-     *
-     * @return void
      */
     public function register()
     {

@@ -9,6 +9,7 @@ class PostController extends Controller
 {
     /**
      * @param $id
+     *
      * @return \Illuminate\Http\JsonResponse
      */
     public function show($id)

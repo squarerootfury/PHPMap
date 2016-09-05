@@ -10,19 +10,15 @@ class NewFollowerListener implements ShouldQueue
 {
     /**
      * Create the event listener.
-     *
-     * @return void
      */
     public function __construct()
     {
-        //
     }
 
     /**
      * Handle the event.
      *
-     * @param  NewFollower  $event
-     * @return void
+     * @param NewFollower $event
      */
     public function handle(NewFollower $event)
     {

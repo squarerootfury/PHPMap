@@ -10,10 +10,11 @@ class RoleMiddleware
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \Closure $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure                 $next
      * @param $role
      * @param $permission
+     *
      * @return mixed
      */
     public function handle($request, Closure $next, $role, $permission)
@@ -22,11 +23,11 @@ class RoleMiddleware
             return redirect('/login');
         }
 
-        if (! $request->user()->hasRole($role)) {
+        if (!$request->user()->hasRole($role)) {
             abort(403);
         }
 
-        if (! $request->user()->can($permission)) {
+        if (!$request->user()->can($permission)) {
             abort(403);
         }
 

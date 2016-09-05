@@ -27,7 +27,8 @@ class SignedUpSocial extends Notification implements ShouldQueue
     /**
      * Get the notification's delivery channels.
      *
-     * @param  mixed  $notifiable
+     * @param mixed $notifiable
+     *
      * @return array
      */
     public function via($notifiable)
@@ -38,14 +39,15 @@ class SignedUpSocial extends Notification implements ShouldQueue
     /**
      * Get the mail representation of the notification.
      *
-     * @param  mixed  $notifiable
+     * @param mixed $notifiable
+     *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable)
     {
         $password = $this->createPassword();
 
-        return (new MailMessage)
+        return (new MailMessage())
                     ->subject('Welcome to PHPMap!')
                     ->line('You have successfully singed up to PHPMap!')
                     ->action('Visit your Profile', 'https://phpmap.co/@'.$this->user->username)
@@ -55,13 +57,14 @@ class SignedUpSocial extends Notification implements ShouldQueue
     /**
      * Get the array representation of the notification.
      *
-     * @param  mixed  $notifiable
+     * @param mixed $notifiable
+     *
      * @return array
      */
     public function toArray($notifiable)
     {
         return [
-            //
+
         ];
     }
 

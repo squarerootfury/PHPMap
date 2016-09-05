@@ -11,7 +11,6 @@ class UserRegisteredMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-
     public $user;
 
     /**
