@@ -60,7 +60,7 @@
             <div class="col-md-4">
                 <h3>Story</h3>
                 <article>
-                    Back in 2015, <a href="https://twitter.com/fwartner">Florian Wartner</a> was building <strong>Laramap</strong> which is only for the <a
+                    Back in 2015, <a href="https://twitter.com/fwartner">Florian Wartner</a> was building <strong>Laramap</strong> which was only for the <a
                             href="https://laravel.com">Laravel Community</a>. He decided to reinvent the idea behind Laramap and created <strong>PHPMap</strong>.
                     After <a href="https://twitter.com/taylorotwell">Taylor Otwell</a> pushed the first code of Laravel 5.3 on GitHub, Florian started working on PHPMap.
                     It was released on August the 28. in 2016 right after Laravel 5.3 was released. <br> <br>
