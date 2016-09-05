@@ -4,7 +4,7 @@
             <a href="/@{{ post.author.username }}" class="post panel panel--with-avatar panel-default">
                 <div class="post-avatar"><img class="img img-responsive" v-bind:src="post.author.avatar" alt="{{ post.author.username }}"></div>
                 <div class="panel-heading"><strong>{{ post.author.username }}</strong></div>
-                <div class="panel-body" v-html="post.body | marked"></div>
+                <div class="panel-body" v-html="post.body | marked | truncate '60'"></div>
             </a>
         </div>
     </div>
@@ -24,6 +24,10 @@
 
         filters: {
             marked: marked,
+
+            truncate: function(string, value) {
+                return string.substring(0, value) + '...';
+            }
         },
 
         methods: {
