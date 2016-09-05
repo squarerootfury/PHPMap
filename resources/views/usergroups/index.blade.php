@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('page_title')
-    Meetups
+    Usergroups
 @stop
 
 @section('styles')
@@ -18,6 +18,6 @@
 
 @section('content')
     <div class="container">
-        <meetups></meetups>
+        <usergroups></usergroups>
     </div>
 @stop

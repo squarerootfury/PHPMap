@@ -30,7 +30,7 @@ Route::get('auth/github', 'Auth\SocialController@redirectToProvider');
 Route::get('auth/github/callback', 'Auth\SocialController@handleProviderCallback');
 
 Route::resource('users', 'Users\UserController');
-Route::resource('meetups', 'Meetups\MeetupController');
+Route::resource('usergroups', 'Meetups\UsergroupController');
 
 Route::get('@{username}', 'Users\UserController@show');
 

@@ -1,13 +1,25 @@
 <?php
 
-namespace App\Http\Controllers\Meetups;
+namespace App\Http\Controllers\ApiPublic;
 
-use App\Models\Meetup;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class MeetupController extends Controller
+use GuzzleHttp\Client;
+
+class UsergroupController extends Controller
 {
+    public $client;
+
+    /**
+     * UsergroupController constructor.
+     * @param Client $client
+     */
+    public function __construct(Client $client)
+    {
+        $this->client = $client;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,9 +27,10 @@ class MeetupController extends Controller
      */
     public function index()
     {
-        $meetups = Meetup::where('published', true)->get();
+        $result = $this->client->request('GET', 'https://php.ug/api/rest/listtype/1');
 
-        return view('meetups.index', compact('meetups'));
+
+        return $result;
     }
 
     /**
@@ -27,11 +40,7 @@ class MeetupController extends Controller
      */
     public function create()
     {
-        if (! auth()->check()) {
-            return redirect('/login');
-        }
 
-        return view('meetups.create');
     }
 
     /**
@@ -43,6 +52,7 @@ class MeetupController extends Controller
      */
     public function store(Request $request)
     {
+        
     }
 
     /**
@@ -54,6 +64,10 @@ class MeetupController extends Controller
      */
     public function show($id)
     {
+        $result = $this->client->request('GET', 'https://php.ug/api/rest/usergroup/'.$id);
+
+
+        return $result;
     }
 
     /**
