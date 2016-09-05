@@ -29,7 +29,7 @@
 
         methods: {
             getMeetups() {
-                this.$http.get('https://php.ug/api/rest/listtype/1').then(response => {
+                this.$http.get('/public/meetups').then(response => {
                     this.meetups = response.data;
                 });
             }
