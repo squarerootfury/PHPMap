@@ -1,8 +1,17 @@
 <template>
     <div class="row">
-        <div class="col-md-6 col-sm-12" v-for="meetup in meetups.groups">
-            {{ meetup.name }} <br>
-            {{ meetup.url }}
+        <div class="col-md-4" v-for="meetup in meetups.groups">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>{{ meetup.name }}</h3>
+                </div>
+
+                <img class="img" src="https://maps.googleapis.com/maps/api/staticmap?maptype=roadmap&center={{ meetup.latitude }},{{ meetup.longitude }}&zoom=16&size=640x400&key=AIzaSyDlDS7KYdMMQd_CynknFWTxhZwUwMhnZAg">
+
+                <div class="panel-footer">
+                    <a href="{{ meetup.url }}">Visit website</a>
+                </div>
+            </div>
         </div>
     </div>
 </template>
