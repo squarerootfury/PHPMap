@@ -3,7 +3,7 @@
         <div class="col-md-4" v-for="ug in ugs.groups">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">{{ ug.name }}</h3>
+                    <h3 class="panel-title">{{ ug.name }}, <small>{{ ug.country }}</small></h3>
                 </div>
 
                 <img class="img img-responsive" src="https://maps.googleapis.com/maps/api/staticmap?maptype=roadmap&center={{ ug.latitude }},{{ ug.longitude }}&zoom=13&size=400x200&key=AIzaSyDlDS7KYdMMQd_CynknFWTxhZwUwMhnZAg">
