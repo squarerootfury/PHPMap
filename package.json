@@ -24,6 +24,7 @@
     "laravel-echo": "^0.1.2",
     "lodash": "^4.14.0",
     "marked": "^0.3.6",
+    "marker-clusterer-plus": "^2.1.4",
     "moment": "^2.14.1",
     "places.js": "^1.4.3",
     "pusher-js": "^3.2.1",
