@@ -58,7 +58,7 @@ class UserController extends Controller
             $users = User::all();
         }
 
-        if (!$user) {
+        if (! $user) {
             abort(404);
         }
 

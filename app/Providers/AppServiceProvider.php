@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         User::created(function ($user) {
-            if (!$user->github_id === null) {
+            if (! $user->github_id === null) {
                 $user->notify(new SignedUp($user));
 
                 event(new UserSignedUp($user));

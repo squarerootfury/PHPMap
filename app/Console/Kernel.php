@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\Reminders\AddressReminder;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -13,7 +14,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\Reminders\AddressReminder::class,
+        AddressReminder::class,
     ];
 
     /**
