@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Api\Users;
 
 use App\User;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class FollowController extends Controller
@@ -20,10 +18,12 @@ class FollowController extends Controller
 
         if ($request->user()->followers->contains($user)) {
             $request->user()->followtoggle($user);
-            return response()->json('You are not longer following '. $user->username, 200);
+
+            return response()->json('You are not longer following '.$user->username, 200);
         }
 
         $request->user()->followtoggle($user);
-        return response()->json('You are now following '. $user->username, 200);
+
+        return response()->json('You are now following '.$user->username, 200);
     }
 }

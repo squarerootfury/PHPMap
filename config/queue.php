@@ -48,12 +48,12 @@ return [
             'retry_after' => 90,
         ],
 
-        'sqs' => [
+         'sqs' => [
             'driver' => 'sqs',
-            'key' => 'your-public-key',
-            'secret' => 'your-secret-key',
-            'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
-            'queue' => 'your-queue-name',
+            'key' => env('AWS_KEY'),
+            'secret' => env('AWS_SECRET'),
+            'prefix' => env('AWS_PREFIX'),
+            'queue' => 'default',
             'region' => 'us-east-1',
         ],
 

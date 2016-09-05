@@ -7,7 +7,6 @@ use App\Models\Notification;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
-
 use App\Models\BlogEntry;
 use App\Models\UserPost;
 use Laravel\Scout\Searchable;
@@ -23,7 +22,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'username', 'avatar', 'profile_cover', 'email', 'github_id', 'slack_webhook_url', 'password', 'is_admin', 'lat', 'lng', 'address', 'city', 'country', 'company', 'intro', 'website', 'github_url', 'twitter_url', 'facebook_url', 'linkedin_url'
+        'name', 'username', 'avatar', 'profile_cover', 'email', 'github_id', 'slack_webhook_url', 'password', 'is_admin', 'lat', 'lng', 'address', 'city', 'country', 'company', 'intro', 'website', 'github_url', 'twitter_url', 'facebook_url', 'linkedin_url',
     ];
 
     /**
@@ -32,11 +31,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token', 'slack_webhook_url', 'github_id'
+        'password', 'remember_token', 'slack_webhook_url', 'github_id',
     ];
 
     protected $casts = [
-        'is_admin' => 'boolean'
+        'is_admin' => 'boolean',
     ];
 
     public function routeNotificationForMail()
@@ -68,7 +67,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Notification::class, 'notifiable_id');
     }
-    
+
     public function blog_entries()
     {
         return $this->hasMany(BlogEntry::class);
@@ -81,15 +80,15 @@ class User extends Authenticatable
 
     public function favorite_articles()
     {
-        
     }
 
-    function followers()
+    public function followers()
     {
-        return $this->belongsToMany(User::class, 'followers', 'user_id', 'follower_id');
+        return $this->belongsToMany(self::class, 'followers', 'user_id', 'follower_id');
     }
 
-    function followtoggle(User $user) {
+    public function followtoggle(User $user)
+    {
         $this->followers()->toggle($user->id);
 //        event(new NewFollower($this));
     }

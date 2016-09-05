@@ -16,11 +16,11 @@ class Meetup extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'location', 'address', 'lat', 'lng', 'website', 'user_id', 'city', 'country', 'from_date', 'to_date', 'published', 'description'
+        'title', 'location', 'address', 'lat', 'lng', 'website', 'user_id', 'city', 'country', 'from_date', 'to_date', 'published', 'description',
     ];
 
     protected $casts = [
-        'published' => 'boolean'
+        'published' => 'boolean',
     ];
 
     public function author()

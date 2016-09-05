@@ -25,8 +25,6 @@ class AddressReminder extends Command
 
     /**
      * Create a new command instance.
-     *
-     * @return void
      */
     public function __construct()
     {
@@ -53,6 +51,7 @@ class AddressReminder extends Command
             }
         }
 
-        $this->info('Reminder was send to "'. $users->count() . '" users');
+        $this->info('Reminder was sent to "' . $users->count() . '" users');
     }
+
 }

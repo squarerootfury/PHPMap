@@ -24,7 +24,7 @@ class AvatarRequest extends FormRequest
     public function rules()
     {
         return [
-            'avatar' => 'required|image|mimes:jpeg,png'
+            'avatar' => 'required|image|mimes:jpeg,png',
         ];
     }
 }

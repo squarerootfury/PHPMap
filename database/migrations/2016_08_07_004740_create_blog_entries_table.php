@@ -8,8 +8,6 @@ class CreateBlogEntriesTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
@@ -21,7 +19,7 @@ class CreateBlogEntriesTable extends Migration
 
             $table->string('title');
             $table->string('slug');
-            
+
             $table->longText('body');
             $table->string('excerpt');
 
@@ -31,8 +29,6 @@ class CreateBlogEntriesTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {

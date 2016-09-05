@@ -1,19 +1,16 @@
 <?php
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-
 use App\User;
 
 class UserTest extends TestCase
 {
-	use DatabaseMigrations;
+    use DatabaseMigrations;
 
     public function test_find_users_by_their_username()
     {
         $createdUser = factory(User::class)->create([
-            'username' => 'johndoe'
+            'username' => 'johndoe',
         ]);
 
         $foundUser = User::findByUsername('johndoe');
@@ -26,7 +23,7 @@ class UserTest extends TestCase
     {
         $createdUser = factory(User::class)->create([
             'username' => 'johndoe',
-            'email' => 'john@example.com'
+            'email' => 'john@example.com',
         ]);
 
         $foundUser = User::findByemail('john@example.com');

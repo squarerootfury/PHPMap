@@ -99,10 +99,9 @@ return [
              * After cleaning up the backups remove the oldest backup until
              * this amount of megabytes has been reached.
              */
-            'deleteOldestBackupsWhenUsingMoreMegabytesThan' => 5000
-        ]
+            'deleteOldestBackupsWhenUsingMoreMegabytesThan' => 5000,
+        ],
     ],
-
 
     /*
      *  In this array you can specify which backups should be monitored.
@@ -136,18 +135,18 @@ return [
 
         /*
          * Here you can specify the ways you want to be notified when certain
-         * events take place. Possible values are "log", "mail", "slack", 
+         * events take place. Possible values are "log", "mail", "slack",
          * "pushover", and "telegram".
          *
          * Slack requires the installation of the maknz/slack package.
          * Telegram requires the installation of the irazasyed/telegram-bot-sdk package.
          */
         'events' => [
-            'whenBackupWasSuccessful'     => ['log', 'mail'],
-            'whenCleanupWasSuccessful'    => ['log', 'mail'],
-            'whenHealthyBackupWasFound'   => ['log', 'mail'],
-            'whenBackupHasFailed'         => ['log', 'mail'],
-            'whenCleanupHasFailed'        => ['log', 'mail'],
+            'whenBackupWasSuccessful' => ['log', 'mail'],
+            'whenCleanupWasSuccessful' => ['log', 'mail'],
+            'whenHealthyBackupWasFound' => ['log', 'mail'],
+            'whenBackupHasFailed' => ['log', 'mail'],
+            'whenCleanupHasFailed' => ['log', 'mail'],
             'whenUnhealthyBackupWasFound' => ['log', 'mail'],
         ],
 
@@ -156,38 +155,38 @@ return [
          */
         'mail' => [
             'from' => 'no-reply@phpmap.co',
-            'to'   => 'f.wartner@phpmap.co',
+            'to' => 'f.wartner@phpmap.co',
         ],
 
         /*
          * Here you can specify how messages should be sent to Slack.
          */
         'slack' => [
-            'channel'  => '#backups',
+            'channel' => '#backups',
             'username' => 'Backup bot',
-            'icon'     => ':robot:',
+            'icon' => ':robot:',
         ],
 
         /*
          * Here you can specify how messages should be sent to Pushover.
          */
         'pushover' => [
-            'token'  => env('PUSHOVER_APP_TOKEN'),
-            'user'   => env('PUSHOVER_USER_KEY'),
+            'token' => env('PUSHOVER_APP_TOKEN'),
+            'user' => env('PUSHOVER_USER_KEY'),
             'sounds' => [
-                'success' => env('PUSHOVER_SOUND_SUCCESS','pushover'),
-                'error'   => env('PUSHOVER_SOUND_ERROR','siren'),
+                'success' => env('PUSHOVER_SOUND_SUCCESS', 'pushover'),
+                'error' => env('PUSHOVER_SOUND_ERROR', 'siren'),
             ],
         ],
-        
+
         /*
          * Here you can specify how messages should be sent to Telegram Bot API.
          */
         'telegram' => [
             'bot_token' => env('TELEGRAM_BOT_TOKEN'),
-            'chat_id'   => env('TELEGRAM_CHAT_ID'),
+            'chat_id' => env('TELEGRAM_CHAT_ID'),
             'async_requests' => env('TELEGRAM_ASYNC_REQUESTS', false),
             'disable_web_page_preview' => env('TELEGRAM_DISABLE_WEB_PAGE_PREVIEW', true),
         ],
-    ]
+    ],
 ];

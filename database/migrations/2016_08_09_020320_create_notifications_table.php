@@ -8,14 +8,12 @@ class CreateNotificationsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->increments('id');
-            
+
             $table->string('type');
             $table->string('notifiable_type');
             $table->integer('notifiable_id');
@@ -29,8 +27,6 @@ class CreateNotificationsTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {
