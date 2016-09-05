@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div class="col-md-6 col-sm-12" v-for="meetup in meetups">
+        <div class="col-md-6 col-sm-12" v-for="meetup in meetups.groups">
             {{ meetup.name }} <br>
             {{ meetup.url }}
         </div>
