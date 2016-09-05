@@ -4,13 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "hash": "75f4d9f179ab55a5f023534d0c967a36",
-    "content-hash": "1af08d07a106088c53c7893270107bb3",
-=======
     "hash": "d6b054cc8b96a4997477168b4a5de67a",
     "content-hash": "261827cb3c986ed2a724eef55316760e",
->>>>>>> master
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -571,6 +566,105 @@
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
             "time": "2016-07-18 04:51:16"
+        },
+        {
+            "name": "get-stream/stream",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GetStream/stream-php.git",
+                "reference": "d78213b4823566d1808b9993e9ae73e80cde2ab3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GetStream/stream-php/zipball/d78213b4823566d1808b9993e9ae73e80cde2ab3",
+                "reference": "d78213b4823566d1808b9993e9ae73e80cde2ab3",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": ">=4.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.3.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-0": {
+                    "GetStream\\Stream": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Tommaso Barbugli",
+                    "email": "tbarbugli@gmail.com"
+                }
+            ],
+            "description": "A PHP client for Stream (https://getstream.io)",
+            "homepage": "https://getstream.io",
+            "keywords": [
+                "feedly",
+                "newsfeed",
+                "stream"
+            ],
+            "time": "2015-03-16 16:43:24"
+        },
+        {
+            "name": "get-stream/stream-laravel",
+            "version": "2.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GetStream/stream-laravel.git",
+                "reference": "aa2c05b6069c79b05fd9b2ce51f3cab9de504312"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GetStream/stream-laravel/zipball/aa2c05b6069c79b05fd9b2ce51f3cab9de504312",
+                "reference": "aa2c05b6069c79b05fd9b2ce51f3cab9de504312",
+                "shasum": ""
+            },
+            "require": {
+                "get-stream/stream": "~2.1",
+                "illuminate/database": ">=4.2",
+                "illuminate/support": ">=4.2",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "GetStream\\StreamLaravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tommaso Barbugli",
+                    "email": "tbarbugli@gmail.com"
+                }
+            ],
+            "description": "Build newsfeeds and activity feeds on Laravel using getstream.io",
+            "homepage": "https://getstream.io/",
+            "keywords": [
+                "activity",
+                "activity feed",
+                "aggregated feed",
+                "getstream",
+                "newsfeed",
+                "notification feed"
+            ],
+            "time": "2015-06-30 16:49:18"
         },
         {
             "name": "guzzlehttp/guzzle",
