@@ -3,13 +3,13 @@
         <div class="col-md-4" v-for="meetup in meetups.groups">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3>{{ meetup.name }}</h3>
+                    <h3 class="panel-title">{{ meetup.name }}</h3>
                 </div>
 
-                <img class="img" src="https://maps.googleapis.com/maps/api/staticmap?maptype=roadmap&center={{ meetup.latitude }},{{ meetup.longitude }}&zoom=16&size=640x400&key=AIzaSyDlDS7KYdMMQd_CynknFWTxhZwUwMhnZAg">
+                <img class="img img-responsive" src="https://maps.googleapis.com/maps/api/staticmap?maptype=roadmap&center={{ meetup.latitude }},{{ meetup.longitude }}&zoom=16&size=300x200&key=AIzaSyDlDS7KYdMMQd_CynknFWTxhZwUwMhnZAg">
 
                 <div class="panel-footer">
-                    <a href="{{ meetup.url }}">Visit website</a>
+                    <i class="fa fa-link" aria-hidden="true"></i> <a href="{{ meetup.url }}">Visit website</a>
                 </div>
             </div>
         </div>
