@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Providers;
+namespace App\Providers;
 
 use App\Events\Users\UserSignedUp;
 use App\Notifications\Users\SignedUp;

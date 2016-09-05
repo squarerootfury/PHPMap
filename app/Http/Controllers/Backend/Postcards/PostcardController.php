@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Http\Controllers\Backend\Postcards;
+namespace App\Http\Controllers\Backend\Postcards;
 
 use App\Http\Requests\Postcards\CreatePostcard;
 use App\Models\Postcard;

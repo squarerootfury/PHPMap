@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Http\Controllers\Meetups;
+namespace App\Http\Controllers\Meetups;
 
 use App\Models\Meetup;
 use Illuminate\Http\Request;

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Listeners\Users;
+namespace App\Listeners\Users;
 
 use App\Events\Users\NewFollower;
 use Illuminate\Contracts\Queue\ShouldQueue;

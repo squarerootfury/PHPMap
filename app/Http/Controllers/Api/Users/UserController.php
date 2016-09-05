@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Http\Controllers\Api\Users;
+namespace App\Http\Controllers\Api\Users;
 
 use App\Http\Requests\Users\UpdateRequest;
 use Illuminate\Http\Request;

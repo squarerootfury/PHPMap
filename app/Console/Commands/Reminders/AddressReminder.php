@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Console\Commands\Reminders;
+namespace App\Console\Commands\Reminders;
 
 use App\Notifications\Admin\AddressReminderReport;
 use App\Notifications\Users\RemindAddress;
