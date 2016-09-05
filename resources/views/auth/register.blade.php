@@ -102,7 +102,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">Username</label>
+                                <label for="name" class="col-md-4 control-label">Display Name</label>
 
                                 <div class="col-md-6">
                                     <input id="username" type="text" class="form-control" name="username" value="{{ old('username') }}">
