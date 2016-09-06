@@ -1,12 +1,14 @@
 // Infobox code based on https://codepen.io/emgerold/pen/kjivC
 
+var boxes = [];
+
 function InfoBox(opts) {
     google.maps.OverlayView.call(this);
     this.latlng_ = opts.latlng;
     this.map_ = opts.map;
     this.content = opts.content;
-    this.offsetVertical_ = -190;
-    this.offsetHorizontal_ = -53;
+    this.offsetVertical_ = opts.offset.vertical;
+    this.offsetHorizontal_ = opts.offset.horizontal;
     this.height_ = 165;
     this.width_ = 266;
     var me = this;
@@ -14,6 +16,11 @@ function InfoBox(opts) {
             google.maps.event.addListener(this.map_, "bounds_changed", function () {
                 return me.panMap.apply(me);
             });
+
+    boxes.forEach(function (box) {
+        box.hide();
+    });
+    boxes.push(this);
     // Once the properties of this OverlayView are initialized, set its map so
     // that we can display it. This will trigger calls to panes_changed and
     // draw.
@@ -25,7 +32,7 @@ InfoBox.prototype = new google.maps.OverlayView();
 
 // Set the visibility to 'hidden' or 'visible'.
 InfoBox.prototype.hide = function () {
-    if (this.div_) {
+    if (this.div_ && this.div_.style.visibility != 'hidden') {
         // The visibility property must be a string enclosed in quotes.
         this.div_.style.visibility = 'hidden';
     }
@@ -33,6 +40,9 @@ InfoBox.prototype.hide = function () {
 
 InfoBox.prototype.show = function () {
     if (this.div_) {
+        boxes.forEach(function (box) {
+            box.hide();
+        });
         this.div_.style.visibility = 'visible';
     }
 };

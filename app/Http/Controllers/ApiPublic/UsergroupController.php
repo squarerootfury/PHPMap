@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Cache;
 
 class UsergroupController extends Controller
 {
@@ -27,10 +28,9 @@ class UsergroupController extends Controller
      */
     public function index()
     {
-        $result = $this->client->request('GET', 'https://php.ug/api/rest/listtype/1');
-
-
-        return $result;
+        return Cache::remember('usergroups-list', 60 * 24, function() {
+            return $this->client->request('GET', 'https://php.ug/api/rest/listtype/1')->getBody()->__toString();
+        });
     }
 
     /**
