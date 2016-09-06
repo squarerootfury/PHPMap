@@ -86,6 +86,21 @@
                 <div class="col-md-3">
                     <a href="https://larajobs.com/?partner=499"><img src="{{ asset('images/sponsors/larajobs.jpg') }}" alt="Larajobs Logo" class="img img-responsive"></a>
                 </div>
+
+                <div class="col-md-3">
+                    <a class="fortrabbit" href="https://www.fortrabbit.com">•fortrabbit</a>
+                    <style>
+                        .fortrabbit {
+                            font-family: Georgia,Times,"Times New Roman",serif;
+                            font-weight: bold;
+                            font-style: italic;
+                        }
+                    </style>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="https://php.ug"><img src="{{ asset('images/partners/phpug.png') }}" alt="PHPug Logo" class="img img-responsive"></a>
+                </div>
             </div>
         </div>
     </div>
