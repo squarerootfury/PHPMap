@@ -1,14 +1,17 @@
 <template>
-    <div id="map"></div>
+    <div id="map" :class="{loaded: mapLoaded}"></div>
 </template>
 
 <script>
     var geomap;
     var MarkerClusterer = require('marker-clusterer-plus');
+    var InfoBox = require('../extra/google_maps_infobox.js');
+    
     export default {
         data() {
             return {
-                users: []
+                users: [],
+                mapLoaded: false
             };
         },
 
@@ -46,6 +49,10 @@
                     var positions = [];
                     var markers = [];
 
+                    var infowindow = new google.maps.InfoWindow({
+                        content: ""
+                    });
+                
                     all.forEach(function (user) {
                         var usr = {
                             name: user.name,
@@ -72,7 +79,7 @@
 
                         positions.push(position);
                         
-                        var html = '<span><img style="max-height: 15px;" class="img img-circle" src="' + usr.avatar + '" alt="">&nbsp;<a href="/@'+ usr.username +'">' + usr.username + '</a></span>';
+                        var html = '<img class="img img-circle" src="' + usr.avatar + '" alt="">&nbsp;<a href="/@'+ usr.username +'">' + usr.username + '</a>';
                         var userLatLng = new google.maps.LatLng(usr.geo.lat, usr.geo.lon);
 
                         var marker = new google.maps.Marker({
@@ -80,13 +87,18 @@
                         });
                         
                         markers.push(marker);
-
-                        var infowindow = new google.maps.InfoWindow({
-                            content: html
-                        });
-
+                        var infoBox = null;
+                        
                         google.maps.event.addListener(marker, 'click', function (evt) {
-                            infowindow.open(map, marker);
+                            if(infoBox === null) {
+                                infoBox = new InfoBox.default({
+                                    latlng: this.getPosition(),
+                                    map: map,
+                                    content: html
+                                });
+                            } else {
+                                infoBox.toggle();
+                            }
                         });
                     });
 
@@ -95,6 +107,9 @@
                     };
     
                     new MarkerClusterer(map, markers, clustererOptions);
+                
+                    // Map and markers are loaded, show the map
+                    this.mapLoaded = true;
                 });
             },
 
@@ -116,11 +131,17 @@
 
 <style>
     #map {
+        opacity: 0;
         width: 100%;
         height: 600px;
         position: relative;
         left: 0;
-        top: -22px;
+        top: 0;
+        transition: opacity .2s;
+    }
+    
+    #map.loaded {
+        opacity: 1;
     }
 
     #map .cluster {
@@ -130,5 +151,32 @@
         -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* Internet Explorer/Edge */
         user-select: none;
+    }
+
+    .infobox {
+        position: absolute;
+    }
+    
+    .infobox .content {
+        text-align: center;
+    }
+
+    .infobox .img {
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: 0 auto;
+        border: 3px solid #4CAF50;
+        box-shadow: 0 1px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .infobox a {
+        display: inline-block;
+        margin-top: 5px;
+        background: white;
+        border-radius: 20px;
+        padding: 6px 12px;
+        font-size: 14px;
+        box-shadow: 0 1px 30px rgba(0, 0, 0, 0.3);
     }
 </style>

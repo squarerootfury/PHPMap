@@ -17,7 +17,9 @@
 @stop
 
 @section('content')
-    <homemap></homemap>
+    <div class="map-wrapper">
+        <homemap></homemap>
+    </div>
 
     <div class="container">
         <div class="alert alert-success" role="alert">
