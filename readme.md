@@ -19,6 +19,13 @@ Thank you for considering contributing to PHPMap! Checkout the `CONTRIBUTING.md`
 
 If you discover a security vulnerability within PHPMap, please send an e-mail to Florian Wartner at hi@florianwartner.co. All security vulnerabilities will be promptly addressed.
 
+## Donate
+
+If you would like to support this project, feel free to donate.
+
+[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/PHPMap/)
+
+
 ## License
 
 PHPMap is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).

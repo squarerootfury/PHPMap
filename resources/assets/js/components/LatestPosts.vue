@@ -1,12 +1,10 @@
 <template>
-    <div class="post-list row">
-        <div class="col-md-6 col-sm-12" v-for="post in posts">
-            <a href="/@{{ post.author.username }}" class="post panel panel--with-avatar panel-default">
-                <div class="post-avatar"><img class="img img-responsive" v-bind:src="post.author.avatar" alt="{{ post.author.username }}"></div>
-                <div class="panel-heading"><strong>{{ post.author.username }}</strong></div>
-                <div class="panel-body" v-html="post.body | marked | truncate '60'"></div>
-            </a>
-        </div>
+    <div class="post-list">
+        <a v-for="post in posts" href="/@{{ post.author.username }}" class="post panel panel--with-avatar panel-default">
+            <div class="post-avatar"><img class="img img-responsive" v-bind:src="post.author.avatar" alt="{{ post.author.username }}"></div>
+            <div class="panel-heading"><strong>{{ post.author.username }}</strong></div>
+            <div class="panel-body" v-html="post.body | marked | truncate '60'"></div>
+        </a>
     </div>
 </template>
 
@@ -60,10 +58,17 @@
     .panel.panel--with-avatar .panel-heading, .panel.panel--with-avatar .panel-body {
         padding-left: 50px;
     }
+    
+    .post-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
     .post {
+        width: calc(50% - 60px);
         margin-right: 20px;
-        margin-left: 20px;
+        margin-left: 40px;
         margin-top: 30px;
         position: relative;
         transition: box-shadow 0.15s ease-in;
@@ -83,7 +88,7 @@
     @media screen and (max-width: 991px) {
         .post {
             margin-right: 0;
-            margin-left: 40px;
+            width: 100%;
         }
     }
 </style>
