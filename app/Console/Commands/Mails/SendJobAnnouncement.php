@@ -2,9 +2,10 @@
 
 namespace App\Console\Commands\Mails;
 
+use App\Notifications\Users\JobAnnouncement;
 use Illuminate\Console\Command;
 use App\User;
-use App\Notifications\Users\JobAnnouncment;
+
 
 class SendJobAnnouncement extends Command
 {
