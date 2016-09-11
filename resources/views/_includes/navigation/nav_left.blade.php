@@ -15,7 +15,7 @@
 {{--</li>--}}
 
 <li>
-    <a href="https://jobs.phpmap.co">Jobs</a>
+    <a href="https://larajobs.com/?partner=499">Jobs</a>
 </li>
 
 <li>
