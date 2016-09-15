@@ -23,7 +23,7 @@
 
     <div class="container">
         <div class="alert alert-success" role="alert">
-            <h4 class="text-center">PHPMap is still in development. Feel free to contribute on <a href="https://github.com/PHPMap/PHPMap">GitHub</a>.</h4>
+            <h4 class="text-center">PHPMap is still in <a href="https://github.com/PHPMap/PHPMap/projects/1">development</a>. Feel free to contribute on <a href="https://github.com/PHPMap/PHPMap">GitHub</a>.</h4>
         </div>
 
         <div class="row">
