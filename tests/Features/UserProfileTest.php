@@ -9,9 +9,12 @@ class UserProfileTest extends TestCase
 
     public function test_user_has_profile()
     {
-        $user = factory(User::class)->create(['username' => 'johndoe']);
+        $user = factory(User::class)->create();
 
-        $this->visit('/users/'.$user->username)
-            ->see($user->username);
+        $this->visit('/@'.$user->username)
+            ->see($user->username)
+            ->see($user->city)
+            ->see($user->country)
+            ->see($user->address);
     }
 }
