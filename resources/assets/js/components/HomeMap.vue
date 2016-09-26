@@ -94,7 +94,7 @@
                         
                         google.maps.event.addListener(marker, 'click', function (evt) {
                             if(infoBox === null) {
-                                infoBox = new InfoBox.default({
+                                infoBox = new InfoBox({
                                     latlng: this.getPosition(),
                                     map: this.map,
                                     content: html,
@@ -166,7 +166,7 @@
 
                     google.maps.event.addListener(marker, 'click', function (evt) {
                         if (infoBox === null) {
-                            infoBox = new InfoBox.default({
+                            infoBox = new InfoBox({
                                 latlng: this.getPosition(),
                                 map: this.map,
                                 content: html,
