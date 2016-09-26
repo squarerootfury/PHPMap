@@ -256,8 +256,8 @@
              */
             getClients() {
                 this.$http.get('/oauth/clients')
-                        .then(response => {
-                            this.clients = response.data;
+                        .then((response) => {
+                            this.clients = response.json();
                         });
             },
 
@@ -306,7 +306,7 @@
                 form.errors = [];
 
                 this.$http[method](uri, form)
-                    .then(response => {
+                    .then((response) => {
                         this.getClients();
 
                         form.name = '';
@@ -315,9 +315,9 @@
 
                         $(modal).modal('hide');
                     })
-                    .catch(response => {
-                        if (typeof response.data === 'object') {
-                            form.errors = _.flatten(_.toArray(response.data));
+                    .catch((response) => {
+                        if (typeof response.json() === 'object') {
+                            form.errors = _.flatten(_.toArray(response.json()));
                         } else {
                             form.errors = ['Something went wrong. Please try again.'];
                         }
@@ -329,7 +329,7 @@
              */
             destroy(client) {
                 this.$http.delete('/oauth/clients/' + client.id)
-                        .then(response => {
+                        .then((response) => {
                             this.getClients();
                         });
             }

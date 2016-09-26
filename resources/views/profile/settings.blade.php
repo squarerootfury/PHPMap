@@ -55,7 +55,7 @@
 				<li role="presentation"><a href="#avatar" aria-controls="avatar" role="tab" data-toggle="tab">Avatar</a></li>
 				<li role="presentation"><a href="#password" aria-controls="password" role="tab" data-toggle="tab">Password</a></li>
 				<li role="presentation"><a href="#location" aria-controls="location" role="tab" data-toggle="tab">Location</a></li>
-				{{--<li role="presentation"><a href="#oauth" aria-controls="oauth" role="tab" data-toggle="tab">OAuth</a></li>--}}
+				<li role="presentation"><a href="#oauth" aria-controls="oauth" role="tab" data-toggle="tab">OAuth</a></li>
 			</ul>
 
 			<div class="tab-content">
@@ -109,12 +109,12 @@
 					</form>
 				</div>
 
-				{{--<div role="tabpanel" class="tab-pane" id="oauth">--}}
-					{{--<br>--}}
-					{{--<passport-clients></passport-clients>--}}
-					{{--<passport-authorized-clients></passport-authorized-clients>--}}
-					{{--<passport-personal-access-tokens></passport-personal-access-tokens>--}}
-				{{--</div>--}}
+				<div role="tabpanel" class="tab-pane" id="oauth">
+					<br>
+					<passport-clients></passport-clients>
+					<passport-authorized-clients></passport-authorized-clients>
+					<passport-personal-access-tokens></passport-personal-access-tokens>
+				</div>
 			</div>
 		</div>
 	</div>
