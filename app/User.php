@@ -15,7 +15,7 @@ use Mpociot\Firebase\SyncsWithFirebase;
 
 class User extends Authenticatable
 {
-    use Notifiable, HasRoles, HasApiTokens;
+    use Searchable, Notifiable, HasRoles, HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
