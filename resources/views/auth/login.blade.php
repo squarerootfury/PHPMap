@@ -22,11 +22,11 @@
                     </div>
                     <div class="panel-body">
                         <h5>What is PHPMap?</h5>
-                        <p>PHPMap is an interactive map of php-developers worldwide.</p>
+                        <p>PHPMap is an interactive map of PHP-developers worldwide.</p>
 
                         <h5>Features</h5>
                         <ul class="fa-ul">
-                            <li class=""><i class="fa fa-check green" aria-hidden="true"></i> Meet other php-developers around you</li>
+                            <li class=""><i class="fa fa-check green" aria-hidden="true"></i> Meet other PHP-developers around you</li>
                             <li><i class="fa fa-check green" aria-hidden="true"></i> Organize meetups & usergroups in your area</li>
                             <li><i class="fa fa-check green" aria-hidden="true"></i> Work on projects together</li>
                             <li><i class="fa fa-check green" aria-hidden="true"></i> Find awesome projects</li>
